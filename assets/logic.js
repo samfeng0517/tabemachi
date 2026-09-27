@@ -192,8 +192,16 @@ export function sortRestaurants(list, mode) {
   return sorted.sort(byNewest);
 }
 
+const PENDING_BRANCH = "分店待選";
+
+// City part of an area like "台北・大安" or "越南・胡志明市" (country-prefixed).
+// Returns "" when the city is unknown, e.g. "日本・分店待選".
 export function cityOf(area) {
-  return (area ?? "").split("・")[0];
+  const segments = (area ?? "").split("・");
+  const city = COUNTRY_ORDER.includes(segments[0])
+    ? (segments[1] ?? "")
+    : segments[0];
+  return city === PENDING_BRANCH ? "" : city;
 }
 
 export function computeStats(data) {
@@ -247,7 +255,9 @@ export function latestDate(restaurants) {
 }
 
 export function isPending(restaurant) {
-  return !restaurant.verified || (restaurant.area ?? "").includes("分店待選");
+  return (
+    !restaurant.verified || (restaurant.area ?? "").includes(PENDING_BRANCH)
+  );
 }
 
 export function parseFavorites(raw) {

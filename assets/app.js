@@ -44,6 +44,9 @@ const els = {
   guides: $("#guide-list"),
   lastUpdated: $("#last-updated"),
   viewButtons: document.querySelectorAll("[data-view]"),
+  sheetBackground: document.querySelectorAll(
+    ".skip-link, .masthead, .toolbar, #results, .guides, .curation, .site-footer",
+  ),
 };
 
 const state = {
@@ -94,10 +97,10 @@ function svgIcon(className, pathData) {
 const HEART_PATH =
   "M12 20.5s-7.5-4.4-7.5-10.1A4.4 4.4 0 0 1 12 7.6a4.4 4.4 0 0 1 7.5 2.8c0 5.7-7.5 10.1-7.5 10.1Z";
 
-function externalLink(label, url, extraClass = "") {
+function externalLink(label, url) {
   const href = safeHref(url);
   if (!href) return null;
-  const link = el("a", `card-link ${extraClass}`.trim(), `${label} ↗`);
+  const link = el("a", "card-link", `${label} ↗`);
   link.href = href;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
@@ -180,7 +183,7 @@ function buildCard(restaurant) {
   const links = [
     externalLink("地圖", restaurant.map_url),
     externalLink("原始推薦", restaurant.source),
-    externalLink("圖片來源", restaurant.image_credit_url, "card-link-credit"),
+    externalLink("圖片來源", restaurant.image_credit_url),
   ].filter(Boolean);
   if (links.length) {
     const linkRow = el("div", "card-links");
@@ -222,9 +225,10 @@ function optionsWithSelection(key) {
   return options;
 }
 
-function chip(label, count, pressed, onSelect) {
+function chip(value, label, count, pressed, onSelect) {
   const button = el("button", "chip");
   button.type = "button";
+  button.dataset.value = value;
   button.setAttribute("aria-pressed", String(pressed));
   button.append(el("span", "chip-label", label));
   if (count !== null) button.append(el("span", "chip-count", String(count)));
@@ -235,15 +239,24 @@ function chip(label, count, pressed, onSelect) {
 function renderChips(key) {
   const container = document.querySelector(`[data-facet="${key}"]`);
   const selected = state.filters[key];
-  const chips = [chip("全部", null, !selected, () => setFacet(key, ""))];
+  const focused = container.contains(document.activeElement)
+    ? document.activeElement.dataset.value
+    : null;
+  const chips = [chip("", "全部", null, !selected, () => setFacet(key, ""))];
   for (const { value, count } of optionsWithSelection(key)) {
     chips.push(
-      chip(value, count, value === selected, () =>
+      chip(value, value, count, value === selected, () =>
         setFacet(key, value === selected ? "" : value),
       ),
     );
   }
   container.replaceChildren(...chips);
+  // Re-rendering replaces the buttons; keep keyboard focus on the same option.
+  if (focused !== null) {
+    const target =
+      chips.find((button) => button.dataset.value === focused) ?? chips[0];
+    target.focus();
+  }
 }
 
 function option(value, label) {
@@ -331,11 +344,14 @@ function clearFilters() {
 // ---------- mobile filter sheet ----------
 
 function setSheetOpen(open) {
+  const modal = open && MOBILE_QUERY.matches;
+  // Keep keyboard and screen-reader focus inside the sheet while it is open.
+  for (const node of els.sheetBackground) node.inert = modal;
   els.filterToggle.setAttribute("aria-expanded", String(open));
   els.filters.toggleAttribute("data-open", open);
   els.scrim.hidden = !open;
-  document.body.classList.toggle("sheet-open", open && MOBILE_QUERY.matches);
-  if (open && MOBILE_QUERY.matches) {
+  document.body.classList.toggle("sheet-open", modal);
+  if (modal) {
     // Focus the panel itself so Enter cannot accidentally hit 清除.
     els.filters.focus();
   }

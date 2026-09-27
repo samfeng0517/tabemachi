@@ -1,6 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { COUNTRIES, MEALS } from "../scripts/lib/schema.mjs";
 import {
+  COUNTRY_ORDER,
+  MEAL_ORDER,
   filterRestaurants,
   facetOptions,
   sortRestaurants,
@@ -150,15 +153,17 @@ test("sortRestaurants should order by fewer price symbols when mode is price", (
 });
 
 test("sortRestaurants should order names by zh-Hant collation when mode is name", () => {
+  // Code-point order would be 丸 < 八 < 大; zh-Hant stroke order puts 八 first.
   const list = [
-    r({ id: "a", name: "鼎王" }),
-    r({ id: "b", name: "一蘭" }),
-    r({ id: "c", name: "八田" }),
+    r({ id: "oto", name: "大戶屋" }),
+    r({ id: "maru", name: "丸龜製麵" }),
+    r({ id: "hatta", name: "八田" }),
   ];
-  const expected = [...list].sort((x, y) =>
-    x.name.localeCompare(y.name, "zh-Hant"),
-  );
-  assert.deepEqual(ids(sortRestaurants(list, "name")), ids(expected));
+  assert.deepEqual(ids(sortRestaurants(list, "name")), [
+    "hatta",
+    "maru",
+    "oto",
+  ]);
 });
 
 test("sortRestaurants should order by date desc then id when mode is newest", () => {
@@ -239,4 +244,35 @@ test("parseFavorites should return an empty set when stored value is malformed",
   assert.deepEqual(parseFavorites('{"a":1}'), new Set());
   assert.deepEqual(parseFavorites(null), new Set());
   assert.deepEqual(parseFavorites('["a", 3, "b"]'), new Set(["a", "b"]));
+});
+
+test("computeStats should use the segment after a country name when area starts with a country", () => {
+  const data = {
+    processed_message_count: 1,
+    restaurants: [
+      r({ id: "a", area: "越南・胡志明市" }),
+      r({ id: "b", area: "胡志明市・第一郡" }),
+      r({ id: "c", area: "日本・大阪" }),
+      r({ id: "d", area: "大阪・新世界" }),
+    ],
+  };
+  assert.equal(computeStats(data).cities, 2);
+});
+
+test("computeStats should skip branch-pending areas when counting cities", () => {
+  const data = {
+    processed_message_count: 1,
+    restaurants: [
+      r({ id: "a", area: "日本・分店待選" }),
+      r({ id: "b", area: "台北・分店待選" }),
+      r({ id: "c", area: "東京・分店待選" }),
+      r({ id: "d", area: "" }),
+    ],
+  };
+  assert.equal(computeStats(data).cities, 2);
+});
+
+test("logic constants should equal the schema constants when compared", () => {
+  assert.deepEqual(MEAL_ORDER, MEALS);
+  assert.deepEqual(COUNTRY_ORDER, COUNTRIES);
 });

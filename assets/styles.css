@@ -83,7 +83,6 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 body.sheet-open {
@@ -1019,10 +1018,6 @@ select {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
-
-.cards[data-view="list"] .card-link-credit {
-  display: none;
 }
 
 .filters:focus {
