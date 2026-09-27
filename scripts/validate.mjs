@@ -2,8 +2,15 @@
 // CLI: validate a tabemachi data JSON file against the schema.
 // Usage: node scripts/validate.mjs <path>
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { validateData } from "./lib/schema.mjs";
+
+// Local image paths ("images/<id>.webp") are resolved against the repo root,
+// i.e. the parent of this scripts/ directory, regardless of the data path.
+const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
+const fileExists = (relativePath) => existsSync(join(repoRoot, relativePath));
 
 const path = process.argv[2];
 
@@ -23,7 +30,7 @@ try {
   process.exit(1);
 }
 
-const errors = validateData(data);
+const errors = validateData(data, { fileExists });
 
 if (errors.length > 0) {
   for (const error of errors) {

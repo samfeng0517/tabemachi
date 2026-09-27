@@ -19,8 +19,14 @@ const TRACKING_PARAM_PATTERN = /^utm_/i;
 const TRACKING_PARAM_NAMES = new Set(["fbclid", "igsh", "igshid"]);
 // Discord links (message permalinks, attachment CDN) expose private channel
 // content or expire, so no URL field may point at them. Subdomains such as
-// cdn.discordapp.com and media.discordapp.net are covered by suffix match.
-const DISCORD_DOMAINS = ["discord.com", "discordapp.com", "discordapp.net"];
+// cdn.discordapp.com and media.discordapp.net are covered by suffix match;
+// discord.gg is the invite-link domain.
+const DISCORD_DOMAINS = [
+  "discord.com",
+  "discordapp.com",
+  "discordapp.net",
+  "discord.gg",
+];
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 /**
@@ -61,7 +67,8 @@ function isHttpsUrl(value) {
 function isDiscordUrl(value) {
   let hostname;
   try {
-    hostname = new URL(value).hostname.toLowerCase();
+    // A trailing dot ("discord.com.") is the same host in DNS terms.
+    hostname = new URL(value).hostname.toLowerCase().replace(/\.$/, "");
   } catch {
     return false;
   }
@@ -164,11 +171,16 @@ function validateHttpsOrEmptyUrl(value, field, label, errors) {
   }
 }
 
-function validateImageUrl(value, id, label, errors) {
+function validateImageUrl(value, id, label, errors, fileExists) {
   if (value === "") return;
   rejectDiscordUrl(value, "image_url", label, errors);
   if (isHttpsUrl(value)) return;
-  if (typeof id === "string" && value === `images/${id}.webp`) return;
+  if (typeof id === "string" && value === `images/${id}.webp`) {
+    if (fileExists && !fileExists(value)) {
+      errors.push(`${label}: local image "${value}" does not exist`);
+    }
+    return;
+  }
   errors.push(
     `${label}: "image_url" must be an https URL, "images/<id>.webp", or an empty string (got "${value}")`,
   );
@@ -196,7 +208,7 @@ function validateMessageIds(value, label, errors) {
   }
 }
 
-function validateRestaurant(restaurant, index, errors, idCounts) {
+function validateRestaurant(restaurant, index, errors, idCounts, fileExists) {
   if (typeof restaurant !== "object" || restaurant === null) {
     errors.push(`restaurant[${index}]: must be an object`);
     return;
@@ -217,7 +229,13 @@ function validateRestaurant(restaurant, index, errors, idCounts) {
   requireBoolean(restaurant, "verified", label, errors);
   validateHttpsUrl(restaurant.source, "source", label, errors);
   validateHttpsUrl(restaurant.map_url, "map_url", label, errors);
-  validateImageUrl(restaurant.image_url, restaurant.id, label, errors);
+  validateImageUrl(
+    restaurant.image_url,
+    restaurant.id,
+    label,
+    errors,
+    fileExists,
+  );
   validateHttpsOrEmptyUrl(
     restaurant.image_credit_url,
     "image_credit_url",
@@ -248,8 +266,12 @@ function validateGuide(guide, index, errors, idCounts) {
  * Validates the top-level tabemachi data shape (`{ processed_message_count,
  * restaurants, guides }`). Returns an array of human-readable error strings;
  * an empty array means the data is valid.
+ *
+ * Pass `options.fileExists(relativePath)` to also require that local
+ * `images/<id>.webp` paths exist (paths are relative to the repo root); the
+ * check is skipped when it is omitted, keeping this function pure.
  */
-export function validateData(data) {
+export function validateData(data, { fileExists } = {}) {
   const errors = [];
 
   if (typeof data !== "object" || data === null || Array.isArray(data)) {
@@ -276,7 +298,7 @@ export function validateData(data) {
 
   const idCounts = new Map();
   (restaurants ?? []).forEach((restaurant, index) =>
-    validateRestaurant(restaurant, index, errors, idCounts),
+    validateRestaurant(restaurant, index, errors, idCounts, fileExists),
   );
   (guides ?? []).forEach((guide, index) =>
     validateGuide(guide, index, errors, idCounts),

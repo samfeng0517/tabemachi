@@ -6,7 +6,7 @@
 
 - 開始編輯前，先執行 `git fetch origin main && git checkout -B main origin/main`，確保工作副本就是最新的遠端 `main`（工作階段可能一開始停在 `claude/...` 等其他分支；這也避免跟每週排程或其他 session 的變更衝突）。
 - 使用者要求修改餐廳 / 攻略資料時，**只修改 `data/restaurants.json`**（必要時可一併新增 / 調整 `images/` 底下的圖片檔案；不要在 `data/` 底下新增其他檔案，網站只會發布 `data/restaurants.json`）。除非使用者明確要求改網站外觀或程式，不要動 `index.html`、`assets/`、`scripts/`、`ROUTINE.md` 等其他檔案。
-- 保持既有 schema：欄位定義見 `scripts/lib/schema.mjs`；不要新增 schema 未定義的欄位，也不要拿掉必要欄位。任何 URL 欄位都只能是 `https://`，且不得指向 Discord（`discord.com`、`discordapp.com`、`discordapp.net` 及其子網域）。
+- 保持既有 schema：欄位定義見 `scripts/lib/schema.mjs`；不要新增 schema 未定義的欄位，也不要拿掉必要欄位。任何 URL 欄位都只能是 `https://`，且不得指向 Discord（`discord.com`、`discordapp.com`、`discordapp.net`、`discord.gg` 及其子網域）。
 - 修改完成後，依序執行：
   1. `node scripts/validate.mjs data/restaurants.json`
   2. `npm test`

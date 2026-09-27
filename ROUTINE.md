@@ -80,7 +80,7 @@ git fetch origin main && git checkout -B main origin/main
 分類與查證完成後，依下列三種情況之一繼續（「本次新寫入」的定義見 §2.4）：
 
 - **情況 A：沒有任何需要新寫入的訊息，待刪除清單（已在資料中）也是空的**（也就是剩下的訊息全部是非推薦訊息）→ **不編輯資料、不 commit、不 push、不刪除任何訊息**，直接依 §6 簡短回報這些非推薦訊息。這不是失敗。
-- **情況 B：沒有任何需要新寫入的訊息，但待刪除清單（已在資料中）不是空的** → 資料檔不會有任何差異，**略過 §3 與 §4**（不需要 check-scope / validate、不 commit、不 push），直接到 §5（§5 會先確認工作副本與遠端 `main` 一致才刪除）。
+- **情況 B：沒有任何需要新寫入的訊息，但待刪除清單（已在資料中）不是空的** → 資料檔不會有任何差異，**略過 §3 與 §4**（不需要 check-scope / validate、不 commit、不 push），直接到 §5（§5 會先用 `verify-published.mjs` 確認這些編號確實在已發布的資料中才刪除）。
 - **情況 C：至少有一則訊息需要新寫入資料** → 編輯 `data/restaurants.json`（含 `processed_message_count`，見 §2.4），然後依序執行 §3、§4、§5。
 
 ## 2. 欄位規則
@@ -91,26 +91,26 @@ git fetch origin main && git checkout -B main origin/main
 
 ### 2.1 Restaurant（餐廳卡）
 
-| 欄位                  | 規則                                                                                                                                                                                        |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`                  | slug，格式 `^[a-z0-9-]+$`，在 restaurants + guides 全體中唯一                                                                                                                               |
-| `name`                | 店名（含分店可放在 `area` 或 `name` 皆可，沿用既有資料風格）                                                                                                                                |
-| `country`             | 非空字串；目前已知值 `台灣` / `日本` / `越南`，依地址所在國家判斷；若是全新國家可以延伸此清單                                                                                               |
-| `area`                | 例如 `台北・南港`；連鎖店品牌與城市已確認、只差分店時寫成 `<城市>・分店待選`（沿用舊站做法，見 §1 步驟 4）                                                                                  |
-| `cuisine`             | 料理類別                                                                                                                                                                                    |
-| `price`               | 台灣 / 越南用 `$`～`$$$$`；日本用 `¥`～`¥¥¥`（不可混用符號）                                                                                                                                |
-| `meal`                | 只能是 `午餐` / `晚餐` / `宵夜` / `全時段` 四者之一                                                                                                                                         |
-| `author`              | 推薦者（Discord 暱稱）                                                                                                                                                                      |
-| `date`                | ISO `YYYY-MM-DD`：把推薦訊息的發布時間戳換算成台北時間（Asia/Taipei，UTC+8）後的日期。不可以是未來日期（`validate.mjs` 會拒絕晚於「今天 + 1 天（UTC）」的日期）                             |
-| `location`            | 地址（供地圖使用）；分店待選卡寫「品牌名 + 城市」                                                                                                                                           |
-| `note`                | 一句話說明                                                                                                                                                                                  |
-| `verified`            | 店名與地區皆有可靠來源交叉確認才是 `true`；連鎖店品牌與城市已確認、只差分店（`<城市>・分店待選`）也是 `true`。其他無法確認的情況不要建立餐廳卡（改建立攻略 / 待確認，見 §1 步驟 4）         |
-| `source`              | 必須是 `https://`，套用連結清理規則（見 §2.3）。依序取：訊息附的原始推薦連結 → 訊息沒有（可用的）連結時，用店家官網 → 沒有官網時，用與 `map_url` 相同公式的 Google 地圖網址（查證到的店家） |
-| `map_url`             | Google 地圖連結，必須 `https://`，格式沿用 `https://www.google.com/maps/search/?api=1&query=<location 或店名地址>`                                                                          |
-| `image_url`           | 外部圖片網址（`https://`）或空字串 `""`；**routine 新增的圖片一律用外部網址，不下載進 `images/`**；不可使用 Discord 附件網址                                                                |
-| `image_credit_url`    | 圖片來源連結，`https://` 或空字串                                                                                                                                                           |
-| `color`               | 從 `clay` / `indigo` / `matcha` / `ocean` / `plum` / `saffron` 中挑一個（新卡片自行指定一個，讓圖片失效時有色塊可顯示）                                                                     |
-| `discord_message_ids` | 字串陣列，格式 `^\d{17,20}$`，此筆內不可重複                                                                                                                                                |
+| 欄位                  | 規則                                                                                                                                                                                                                                                                                               |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                  | slug，格式 `^[a-z0-9-]+$`，在 restaurants + guides 全體中唯一                                                                                                                                                                                                                                      |
+| `name`                | 店名（含分店可放在 `area` 或 `name` 皆可，沿用既有資料風格）                                                                                                                                                                                                                                       |
+| `country`             | 非空字串；目前已知值 `台灣` / `日本` / `越南`，依地址所在國家判斷；若是全新國家可以延伸此清單                                                                                                                                                                                                      |
+| `area`                | 例如 `台北・南港`；連鎖店品牌與城市已確認、只差分店時寫成 `<城市>・分店待選`（沿用舊站做法，見 §1 步驟 4）                                                                                                                                                                                         |
+| `cuisine`             | 料理類別                                                                                                                                                                                                                                                                                           |
+| `price`               | 台灣 / 越南用 `$`～`$$$$`；日本用 `¥`～`¥¥¥`（不可混用符號）                                                                                                                                                                                                                                       |
+| `meal`                | 只能是 `午餐` / `晚餐` / `宵夜` / `全時段` 四者之一                                                                                                                                                                                                                                                |
+| `author`              | 推薦者（Discord 暱稱）                                                                                                                                                                                                                                                                             |
+| `date`                | ISO `YYYY-MM-DD`：把推薦訊息的發布時間戳換算成台北時間（Asia/Taipei，UTC+8）後的日期。不可以是未來日期（`validate.mjs` 會拒絕晚於「今天 + 1 天（UTC）」的日期）                                                                                                                                    |
+| `location`            | 地址（供地圖使用）；分店待選卡寫「品牌名 + 城市」                                                                                                                                                                                                                                                  |
+| `note`                | 一句話說明                                                                                                                                                                                                                                                                                         |
+| `verified`            | 店名與地區皆有可靠來源交叉確認才是 `true`；連鎖店品牌與城市已確認、只差分店（`<城市>・分店待選`）也是 `true`。其他無法確認的情況不要建立餐廳卡（改建立攻略 / 待確認，見 §1 步驟 4）                                                                                                                |
+| `source`              | 必須是 `https://`，套用連結清理規則（見 §2.3）。依序取：訊息附的原始推薦連結 → 訊息沒有（可用的）連結時，用店家官網 → 沒有官網時，用與 `map_url` 相同公式的 Google 地圖網址（查證到的店家）                                                                                                        |
+| `map_url`             | Google 地圖連結，必須 `https://`，格式沿用 `https://www.google.com/maps/search/?api=1&query=<location 或店名地址>`                                                                                                                                                                                 |
+| `image_url`           | 外部圖片網址（`https://`）或空字串 `""`；**routine 新增卡片、或替既有卡片補上 / 更換圖片時，一律用外部 `https://` 網址或 `""`，絕不可寫成 `images/…`、也不下載圖片進 `images/`**（既有卡片原本的 `images/<id>.webp` 保持不動；`validate.mjs` 會檢查本機圖片檔是否存在）；不可使用 Discord 附件網址 |
+| `image_credit_url`    | 圖片來源連結，`https://` 或空字串                                                                                                                                                                                                                                                                  |
+| `color`               | 從 `clay` / `indigo` / `matcha` / `ocean` / `plum` / `saffron` 中挑一個（新卡片自行指定一個，讓圖片失效時有色塊可顯示）                                                                                                                                                                            |
+| `discord_message_ids` | 字串陣列，格式 `^\d{17,20}$`，此筆內不可重複                                                                                                                                                                                                                                                       |
 
 ### 2.2 Guide（攻略 / 待確認卡）
 
@@ -128,7 +128,7 @@ git fetch origin main && git checkout -B main origin/main
 
 - 所有寫入的 URL 欄位（`source` / `map_url` / `image_url` / `image_credit_url`）都要先用 `scripts/lib/schema.mjs` 的 `cleanUrl()` 正規化：移除 `utm_*`、`fbclid`、`igsh`、`igshid` 等追蹤參數，保留其他參數與 hash。
 - 只接受 `https://` 連結；非 `https`（含 `http://`、`javascript:`、`data:` 等）一律不得寫入，該連結改用 §2.1 / §2.2 的替代來源、留空，或整則歸類為待確認。
-- **任何 URL 欄位都不得指向 Discord**：`discord.com`、`discordapp.com`、`discordapp.net`、`cdn.discordapp.com`、`media.discordapp.net`（以及它們的子網域）一律禁止——包含訊息連結與訊息附件圖片網址。訊息裡若只有這類連結，就當作「訊息沒有可用的連結」處理（見 §2.1 `source`）。`validate.mjs` 會拒絕這類網址。
+- **任何 URL 欄位都不得指向 Discord**：`discord.com`、`discordapp.com`、`discordapp.net`、`cdn.discordapp.com`、`media.discordapp.net`、`discord.gg`（以及它們的子網域）一律禁止——包含訊息連結與訊息附件圖片網址。訊息裡若只有這類連結，就當作「訊息沒有可用的連結」處理（見 §2.1 `source`）。`validate.mjs` 會拒絕這類網址。
 
 ### 2.4 `processed_message_count`
 
@@ -143,9 +143,12 @@ git fetch origin main && git checkout -B main origin/main
 1. `git fetch origin main`
 2. `node scripts/check-scope.mjs`
 3. `node scripts/validate.mjs data/restaurants.json`
+4. `npm test`
+
+第 2–4 步與網站發布（GitHub Pages）前的自動檢查相同；任何一步沒過，網站就不會更新，所以一定要全部通過。
 
 - **`check-scope.mjs` 失敗**（回報 `data/restaurants.json` 以外的任何變更，包含 `data/` 底下的其他檔案）→ 立即中止。
-- **`validate.mjs` 失敗**（格式錯誤）→ 可以做**一次**修正：依錯誤訊息只修改 `data/restaurants.json`，然後重新執行上面第 2、3 步。若仍有任何一步失敗 → 立即中止。
+- **`validate.mjs` 或 `npm test` 失敗** → 可以做**一次**修正：依錯誤訊息只修改 `data/restaurants.json`，然後重新執行上面第 2–4 步。若仍有任何一步失敗 → 立即中止。
 
 **中止**的意思是：不 commit、不 push、不刪除任何 Discord 訊息；在報告中說明失敗原因，本次不算完成任何項目（訊息尚未被刪除，下次排程會重新讀取並處理，見 §4「無游標設計」）。
 
@@ -155,25 +158,30 @@ git fetch origin main && git checkout -B main origin/main
 
 1. `git add data/restaurants.json`（只加這一個檔案）。
 2. `git commit -m "data: weekly Discord sync (<n> messages)"`：`<n>` 為本次新寫入的訊息則數（與 §2.4 的定義相同，也就是本次 `processed_message_count` 增加的數量；不含「已在資料中」的刪除重試與非推薦訊息）。
-3. 再執行一次 `node scripts/check-scope.mjs`（這次會一併檢查已 commit 的內容）。失敗 → 中止（同 §3 的定義：不 push、不刪除任何訊息）。
+3. 再執行一次 `node scripts/check-scope.mjs`（這次會一併檢查已 commit 的內容）。失敗 → 視為本次發布失敗（不 push、不刪除任何訊息）。
 4. `git push origin HEAD:main`。若失敗的原因不是「遠端有新的 commit」（例如權限或網路錯誤）→ 視為本次發布失敗，不做第 5 步。
 5. **若 push 被拒絕**（遠端在此期間有新的 commit），只重試一次：
    1. `git pull --rebase origin main`。
       - 若 rebase 發生衝突：立即 `git rebase --abort`，視為本次發布失敗（不強制覆蓋、不 force push）。
-   2. rebase 成功後，重新執行 `node scripts/check-scope.mjs` 與 `node scripts/validate.mjs data/restaurants.json`。任一失敗 → 執行 `git reset --hard origin/main`，視為本次發布失敗。
-   3. 兩者都通過 → 再執行一次 `git push origin HEAD:main`。若仍失敗，視為本次發布失敗（不再重試）。
-6. **確認發布**：執行 `node scripts/verify-pushed.mjs`。它會印出本地 `HEAD` 與遠端 `main` 的 SHA，兩者相同才會 exit 0。
-   - **只有 exit 0 才算發布成功**。git push 的訊息（包含「Everything up-to-date」）都不能當作成功的證據。
+   2. rebase 成功後，重新執行與 §3 相同的檢查：`node scripts/check-scope.mjs`、`node scripts/validate.mjs data/restaurants.json`、`npm test`。任一失敗 → 執行 `git reset --hard origin/main`，視為本次發布失敗。
+   3. 三者都通過 → 再執行一次 `git push origin HEAD:main`。若仍失敗，視為本次發布失敗（不再重試）。
+6. **確認推送**：執行 `node scripts/verify-pushed.mjs`。它會印出本地 `HEAD` 與遠端 `main` 的 SHA，兩者相同才會 exit 0。
+   - exit 0 → 繼續到 §5（§5 還會再用 `verify-published.mjs` 逐一確認訊息編號，才決定能不能刪除）。git push 的訊息（包含「Everything up-to-date」）都不能當作成功的證據。
    - exit 非 0 → 視為本次發布失敗。
+
+- **第 1–5 步任何一步失敗**（包含 `git commit` 失敗，例如「nothing to commit」這種空 commit；check-scope 未通過；push 失敗；rebase 衝突；rebase 後檢查未通過而 `git reset --hard`），§4 就以**發布失敗**結束：**不要執行第 6 步，也不要進入 §5**。
 
 - **永遠不可以 force push（`git push --force`、`--force-with-lease` 或任何等效的強制 push 方式）。**
 - **發布失敗時**：不刪除任何 Discord 訊息，並在報告中列出失敗原因（見 §6）。這是「無游標設計」的核心：只要訊息還沒被刪除，下次排程重新讀取頻道時就會再次看到它並重新處理，具備自我修復能力。
 
 ## 5. 確認發布後才刪除 Discord 原訊息
 
-- **刪除前提**（兩者擇一，否則一則都不刪）：
-  - 情況 C：§4 第 6 步的 `node scripts/verify-pushed.mjs` 已 exit 0。
-  - 情況 B：先執行 `node scripts/verify-pushed.mjs`，exit 0 才可以刪除；exit 非 0 → 一則都不刪，在報告中說明（下次排程會重試）。
+- **能進入本節的只有兩種情況**：情況 C 且 §4 第 6 步 `verify-pushed.mjs` 已 exit 0；或情況 B（本次沒有寫入資料）。其他情況一則都不刪。
+- **刪除閘門（情況 B、C 都要做，且在呼叫任何刪除工具之前）**：先整理出本次的待刪除清單（見下方「需要刪除的訊息」），然後執行
+  `node scripts/verify-published.mjs <待刪除清單中所有訊息編號，以空白分隔>`
+  - 它會重新抓取遠端 `main`，確認每一個編號都出現在已發布的 `data/restaurants.json` 某一筆的 `discord_message_ids` 中。
+  - exit 0 → 才可以刪除清單中的訊息（只刪你傳給它的這些編號，不可以再加其他編號）。
+  - exit 非 0（有編號不在已發布資料中、抓取失敗等）→ **一則都不刪**，在報告的「發布失敗」列出它印出的缺少編號或錯誤（下次排程會重新處理）。
 - 刪除工具 `archive_and_delete_restaurant_channel_message` 會先把原文封存到 Cloudflare KV 90 天，再從 Discord 刪除。
 - 每次呼叫只能處理一則訊息，且 `message_id` 與 `confirm_message_id` 必須填入完全相同的訊息編號（工具要求重複確認，防止誤刪）；`confirm_message_id` 不得憑空推測，必須是這次確實處理過的訊息編號。
 - 需要刪除的訊息，包含：
@@ -193,7 +201,7 @@ git fetch origin main && git checkout -B main origin/main
 - **新增**：本次新建立的餐廳卡（店名、地區）
 - **併入**：本次併入既有餐廳卡的訊息（店名、併入的卡片）
 - **待確認**：本次新建立的攻略 / 待確認卡（標題、已知線索）
-- **發布失敗**：若 §4 發布失敗（push 失敗、rebase 衝突後放棄、rebase 後檢查未通過、或 `verify-pushed.mjs` 未通過），列出失敗原因；此時「已刪除」「刪除失敗」必然是空的，因為本次未刪除任何訊息
+- **發布失敗**：若 §4 發布失敗（commit 失敗或空 commit、push 失敗、rebase 衝突後放棄、rebase 後檢查未通過、或 `verify-pushed.mjs` 未通過），或 §5 的 `verify-published.mjs` 未通過，列出失敗原因；此時「已刪除」「刪除失敗」必然是空的，因為本次未刪除任何訊息
 - **已刪除**：成功刪除的 Discord 訊息數量 / 編號
 - **刪除失敗**：刪除失敗的訊息編號與原因
 - **非推薦訊息（未處理、保留在頻道）**：本次判斷不是餐廳推薦的訊息（含純聊天、夾帶指令等），未寫入資料、未刪除，附訊息編號與簡短判斷理由
@@ -202,4 +210,4 @@ git fetch origin main && git checkout -B main origin/main
 
 - 沒有任何訊息（§1 步驟 2）→ 說明本次沒有新訊息。
 - 剩下的訊息全部是非推薦訊息（§1 步驟 5 情況 A）→ 說明本次沒有需要上站的訊息，並簡短列出這些非推薦訊息的編號與理由。
-- 流程在 §1 步驟 0、§3，或 §4 第 3 步（commit 後的 check-scope）就中止 → 說明中止原因，並註明本次沒有刪除任何訊息。
+- 流程在 §1 步驟 0 或 §3 就中止 → 說明中止原因，並註明本次沒有刪除任何訊息。
