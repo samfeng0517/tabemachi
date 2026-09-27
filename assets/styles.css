@@ -892,6 +892,7 @@ select {
 }
 
 .card-meta {
+  overflow-wrap: anywhere;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -930,6 +931,7 @@ select {
 }
 
 .card-by {
+  overflow-wrap: anywhere;
   margin-top: auto;
   padding-top: 6px;
   font-size: 0.8rem;
@@ -1127,9 +1129,20 @@ select {
   align-items: center;
   font-size: 0.78rem;
   color: var(--ink-faint);
+  min-width: 0;
+}
+
+/* Long unbroken tags or areas must wrap instead of widening the page. */
+.guide-head > * {
+  min-width: 0;
+}
+
+.guide-area {
+  overflow-wrap: anywhere;
 }
 
 .guide-tag {
+  overflow-wrap: anywhere;
   padding: 1px 8px;
   border: 1px solid currentColor;
   border-radius: 4px;
@@ -1143,6 +1156,7 @@ select {
 }
 
 .guide-note {
+  overflow-wrap: anywhere;
   font-size: 0.92rem;
   color: var(--ink-soft);
 }
