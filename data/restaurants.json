@@ -319,7 +319,7 @@
       "image_url": "images/afuri.webp",
       "image_credit_url": "https://www.lemon8-app.com/@tokyo.lunch/7209651291927118342",
       "color": "matcha",
-      "discord_message_ids": []
+      "discord_message_ids": ["1552706188708290560"]
     },
     {
       "id": "zhishuang",
@@ -619,9 +619,7 @@
       "image_url": "images/newbabe.webp",
       "image_credit_url": "https://www.threads.com/@maggie0819741/post/DdKxmnmkltx",
       "color": "clay",
-      "discord_message_ids": [
-        "1548356929217232969"
-      ]
+      "discord_message_ids": ["1548356929217232969"]
     },
     {
       "id": "koronagirai",
@@ -641,9 +639,7 @@
       "image_url": "images/koronagirai.webp",
       "image_credit_url": "https://www.threads.com/@amelia._0120/post/DdN9TZND2r_",
       "color": "matcha",
-      "discord_message_ids": [
-        "1548633496526786580"
-      ]
+      "discord_message_ids": ["1548633496526786580"]
     },
     {
       "id": "quan-oc-63",
@@ -743,9 +739,467 @@
       "image_url": "",
       "image_credit_url": "",
       "color": "saffron",
-      "discord_message_ids": [
-        "1553447186140758077"
-      ]
+      "discord_message_ids": ["1553447186140758077"]
+    },
+    {
+      "id": "tonkatsu-suzuya-akamon",
+      "name": "とんかつ すゞ家 赤門店",
+      "country": "日本",
+      "area": "名古屋・大須",
+      "cuisine": "炸豬排",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Kabifufu",
+      "date": "2026-09-26",
+      "location": "愛知県名古屋市中区大須3-11-17",
+      "note": "大須一帶的老字號炸豬排店，腰內肉定食是招牌；週四公休。",
+      "verified": true,
+      "source": "https://maps.app.goo.gl/P2wUeGjRGowN7sWZ8",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4%20%E3%81%99%E3%82%9E%E5%AE%B6%20%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E5%A4%A7%E9%A0%883-11-17",
+      "image_url": "https://juno.nagoya/wp-content/uploads/2019/07/IMG_7466.jpg",
+      "image_credit_url": "https://juno.nagoya/entry/tonkatsu-suzuya/",
+      "color": "clay",
+      "discord_message_ids": ["1553231589746675823"]
+    },
+    {
+      "id": "veer-jees-indian",
+      "name": "維傑印度餐廳 Veer Jee's",
+      "country": "台灣",
+      "area": "台北・中山",
+      "cuisine": "北印度料理",
+      "price": "$$",
+      "meal": "晚餐",
+      "author": "Kabifufu",
+      "date": "2026-08-24",
+      "location": "台北市中山區復興北路432號1樓",
+      "note": "印度籍員工桌邊服務的北印度餐廳，原貼文拿它和西門的加爾各答印度料理比較後更推這間。",
+      "verified": true,
+      "source": "https://www.threads.com/@workcafe7514/post/DcZKGENEokd?xmt=AQG0E0GRQhrH3kr8E7WjIOoHtwrzt5KPX5kXJaNgibMrpdkOVAH3z27UkwB2PtdYZ_FvNsE&slof=1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E5%BE%A9%E8%88%88%E5%8C%97%E8%B7%AF432%E8%99%9F1%E6%A8%93",
+      "image_url": "https://lordcat.net/wp-content/uploads/2023/09/1694109423-36c5933cdf4d2f05fed43df461b235bf.jpg",
+      "image_credit_url": "https://lordcat.net/archives/124966",
+      "color": "indigo",
+      "discord_message_ids": ["1541301105294708766"]
+    },
+    {
+      "id": "eds-diner-taipei",
+      "name": "Ed's Diner 美式BBQ燒烤餐館",
+      "country": "台灣",
+      "area": "台北・中山",
+      "cuisine": "美式 BBQ",
+      "price": "$$",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-08-27",
+      "location": "台北市中山區樂群二路216號1樓",
+      "note": "大直一帶的美式燒烤餐館，牛小排與啤酒罐烤雞是主打，適合多人分食拼盤。",
+      "verified": true,
+      "source": "https://www.instagram.com/p/DEPCwbwsAX4/?igsi=aG5paWtiOHQwNXd1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%A8%82%E7%BE%A4%E4%BA%8C%E8%B7%AF216%E8%99%9F1%E6%A8%93",
+      "image_url": "https://pimg.1px.tw/eggface45/1580973168-2896528029.jpg",
+      "image_credit_url": "https://eggie.tw/blog/posts/8228895244",
+      "color": "matcha",
+      "discord_message_ids": ["1542373349622292581"]
+    },
+    {
+      "id": "ginza-chikamitsu",
+      "name": "銀座 ちかみつ",
+      "country": "日本",
+      "area": "東京・銀座",
+      "cuisine": "燒肉・和牛",
+      "price": "¥¥¥",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-25",
+      "location": "東京都中央区銀座7-13-2",
+      "note": "銀座的高價位和牛燒肉店，厚切牛舌份量驚人，每人預算約兩三萬日圓，有包廂。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BASuf6wV_C/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E5%BA%A7%20%E3%81%A1%E3%81%8B%E3%81%BF%E3%81%A4%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A77-13-2",
+      "image_url": "https://ginza-chikamitsu.com/wp-content/uploads/2021/10/g_2110_interior_3_aisle.jpg",
+      "image_credit_url": "https://ginza-chikamitsu.com/gallery_menu/",
+      "color": "ocean",
+      "discord_message_ids": ["1552995527262474320"]
+    },
+    {
+      "id": "lawson-karaagekun-shiokombu",
+      "name": "LAWSON からあげクン 塩こんぶマヨ味",
+      "country": "日本",
+      "area": "日本・分店待選",
+      "cuisine": "超商炸雞",
+      "price": "¥",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-09-25",
+      "location": "LAWSON 關西",
+      "note": "Lawson 關西地區限定的鹽昆布美乃滋口味炸雞塊（2026-08-18 起販售），任一關西分店都可買，屬期間限定商品。",
+      "verified": true,
+      "source": "https://www.threads.com/@chun.foodieee/post/DdqyLyVktBT?xmt=AQG0s0uDgihPubA5sfNFvUp6RcWkndFscZThSiyRvpcuhslS15nrwL79J8zVblI8Ui0ewkUU&slof=1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=LAWSON%20%E5%A4%A7%E9%98%AA",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "plum",
+      "discord_message_ids": ["1552969962354642954"]
+    },
+    {
+      "id": "lawson-gogo-no-kocha-morning",
+      "name": "LAWSON 限定 午後の紅茶 アイスミルクティー デ モーニング",
+      "country": "日本",
+      "area": "日本・分店待選",
+      "cuisine": "超商飲品・奶茶",
+      "price": "¥",
+      "meal": "全時段",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "LAWSON 日本",
+      "note": "Lawson 限定的瓶裝奶茶，用烏巴與汀布拉紅茶加蜂蜜，甜度偏低、適合早上喝；日本各地 Lawson 皆可找。",
+      "verified": true,
+      "source": "https://www.threads.com/share/DhrCcPv5M/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=LAWSON%20%E6%97%A5%E6%9C%AC",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "saffron",
+      "discord_message_ids": ["1553052435306512468", "1553052708091470025"]
+    },
+    {
+      "id": "shibafukuya-nagono",
+      "name": "うなぎ家 しば福や 那古野本店",
+      "country": "日本",
+      "area": "名古屋・西區",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市西区那古野1-23-10",
+      "note": "古民家改建的關西風鰻魚店，不蒸直接炭烤，外皮酥脆。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%82%A3%E5%8F%A4%E9%87%8E1-23-10",
+      "image_url": "https://www.shibafukuya.co.jp/images/material/bnr_img001.jpg",
+      "image_credit_url": "https://www.shibafukuya.co.jp/",
+      "color": "clay",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "unatoyo",
+      "name": "うな豊",
+      "country": "日本",
+      "area": "名古屋・瑞穗",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市瑞穂区豊岡通3-40",
+      "note": "昭和年間創業的炭烤鰻魚店，曾入選米其林必比登，價格相對親民。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E7%91%9E%E7%A9%82%E5%8C%BA%E8%B1%8A%E5%B2%A1%E9%80%9A3-40",
+      "image_url": "https://www.unatoyo.com/wp-content/uploads/2021/05/unatoyo_top14.jpg",
+      "image_credit_url": "https://www.unatoyo.com/",
+      "color": "indigo",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "kappo-ichibiki",
+      "name": "割烹イチビキ",
+      "country": "日本",
+      "area": "名古屋・名駅",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市中村区名駅南1-3-16",
+      "note": "名駅南的老字號鰻魚割烹，午餐需領整理券、晚餐採預約。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E6%9D%91%E5%8C%BA%E5%90%8D%E9%A7%85%E5%8D%971-3-16",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "matcha",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "atsuta-horaiken-honten",
+      "name": "あつた蓬莱軒 本店",
+      "country": "日本",
+      "area": "名古屋・熱田",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市熱田区神戸町503",
+      "note": "被視為鰻魚三吃（ひつまぶし）發祥的明治年間老舖，排隊是常態。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E7%86%B1%E7%94%B0%E5%8C%BA%E7%A5%9E%E6%88%B8%E7%94%BA503",
+      "image_url": "https://www.houraiken.com/shared/img/index/kv1_pc.jpg",
+      "image_credit_url": "https://www.houraiken.com/",
+      "color": "ocean",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "hitsumabushi-hanaoka",
+      "name": "ひつまぶし 花岡",
+      "country": "日本",
+      "area": "名古屋・榮",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市中区栄3-8-115 サンリツノースビル2F",
+      "note": "榮站附近藏在大樓二樓的鰻魚三吃店，可依份量選半尾到一尾半。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E6%A0%843-8-115%20%E3%82%B5%E3%83%B3%E3%83%AA%E3%83%84%E3%83%8E%E3%83%BC%E3%82%B9%E3%83%93%E3%83%AB2F",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "plum",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "unagi-sawasho",
+      "name": "うなぎ料理 澤正",
+      "country": "日本",
+      "area": "名古屋・錦",
+      "cuisine": "鰻魚・ひつまぶし",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Sam517",
+      "date": "2026-09-25",
+      "location": "愛知県名古屋市中区錦1-17-13 名興ビル1F",
+      "note": "伏見站附近、以百年醬汁為賣點的鰻魚店，週一公休。",
+      "verified": true,
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%B8%82%E4%B8%AD%E5%8C%BA%E9%8C%A61-17-13%20%E5%90%8D%E8%88%88%E3%83%93%E3%83%AB1F",
+      "image_url": "https://unaginosawasho.com/wp-content/uploads/2025/07/R3__7398.jpg",
+      "image_credit_url": "https://unaginosawasho.com/",
+      "color": "saffron",
+      "discord_message_ids": ["1552956987573141586"]
+    },
+    {
+      "id": "jojoen-soramachi",
+      "name": "叙々苑 東京スカイツリータウン・ソラマチ店",
+      "country": "日本",
+      "area": "東京・押上",
+      "cuisine": "燒肉",
+      "price": "¥¥¥",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都墨田区押上1-1-2 東京ソラマチ30F",
+      "note": "晴空塔商場高樓層的高級燒肉連鎖分店，邊吃邊看夜景。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%8F%99%E3%80%85%E8%8B%91%20%E6%9D%B1%E4%BA%AC%E3%82%BD%E3%83%A9%E3%83%9E%E3%83%81%E5%BA%97",
+      "image_url": "https://www.jojoen.co.jp/wp-content/themes/jojoen/shop/jojoen/soramachi/img/sub_image.jpg",
+      "image_credit_url": "https://www.jojoen.co.jp/shop/jojoen/soramachi/",
+      "color": "clay",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "yakiniku-gen-asakusa",
+      "name": "一頭買焼肉 玄 浅草本店",
+      "country": "日本",
+      "area": "東京・淺草",
+      "cuisine": "燒肉・A5和牛",
+      "price": "¥¥¥",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都台東区浅草1-42-4 ヒューリック浅草一丁目ビル2F",
+      "note": "整頭採買 A5 和牛的淺草燒肉店，能吃到多種稀少部位。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E9%A0%AD%E8%B2%B7%E7%84%BC%E8%82%89%20%E7%8E%84%20%E6%B5%85%E8%8D%89%E6%9C%AC%E5%BA%97",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "indigo",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "rokkasen-nishiguchi",
+      "name": "やきにく亭 六歌仙 西口本店",
+      "country": "日本",
+      "area": "東京・新宿",
+      "cuisine": "燒肉・和牛吃到飽",
+      "price": "¥¥¥",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都新宿区西新宿1-10-2 110ビル10F",
+      "note": "新宿西口的和牛燒肉老店，以和牛吃到飽方案聞名。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%84%E3%81%8D%E3%81%AB%E3%81%8F%E4%BA%AD%20%E5%85%AD%E6%AD%8C%E4%BB%99%20%E8%A5%BF%E5%8F%A3%E6%9C%AC%E5%BA%97",
+      "image_url": "https://rokkasen.co.jp/jp/wp-content/themes/rokkasen/assets/img/2nd/honten-img.jpg",
+      "image_credit_url": "https://rokkasen.co.jp/jp/shop_honten/",
+      "color": "matcha",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "rikyu-parcoya-ueno",
+      "name": "仙臺牛たん炭焼 利久 パルコヤ上野店",
+      "country": "日本",
+      "area": "東京・上野",
+      "cuisine": "牛舌",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都台東区上野3-24-6 パルコヤ上野6F",
+      "note": "仙台牛舌連鎖的上野分店，炭烤厚切牛舌定食。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E7%89%9B%E3%81%9F%E3%82%93%E7%82%AD%E7%84%BC%20%E5%88%A9%E4%B9%85%20%E3%83%91%E3%83%AB%E3%82%B3%E3%83%A4%E4%B8%8A%E9%87%8E%E5%BA%97",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "ocean",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "maruka-udon-jimbocho",
+      "name": "うどん 丸香",
+      "country": "日本",
+      "area": "東京・神保町",
+      "cuisine": "讚岐烏龍麵",
+      "price": "¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都千代田区神田小川町3-16-1 ニュー駿河台ビル1F",
+      "note": "神保町排隊名店，彈牙的讚岐烏龍麵，週日公休。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%86%E3%81%A9%E3%82%93%20%E4%B8%B8%E9%A6%99%20%E7%A5%9E%E7%94%B0%E5%B0%8F%E5%B7%9D%E7%94%BA",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "saffron",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "ginza-kagari-honten",
+      "name": "銀座 篝 本店",
+      "country": "日本",
+      "area": "東京・銀座",
+      "cuisine": "雞白湯拉麵",
+      "price": "¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都中央区銀座6-4-12 1F",
+      "note": "濃郁雞白湯拉麵的銀座本店，巷弄小店常大排長龍。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E5%BA%A7%20%E7%AF%9D%20%E6%9C%AC%E5%BA%97",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "clay",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "mutekiya-ikebukuro",
+      "name": "麺創房 無敵家",
+      "country": "日本",
+      "area": "東京・池袋",
+      "cuisine": "豚骨拉麵",
+      "price": "¥",
+      "meal": "宵夜",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都豊島区南池袋1-17-1 崎本ビル",
+      "note": "池袋的濃厚豚骨拉麵名店，營業到深夜，適合宵夜。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E5%89%B5%E6%88%BF%20%E7%84%A1%E6%95%B5%E5%AE%B6%20%E6%B1%A0%E8%A2%8B",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "indigo",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "rokurinsha-tokyo-station",
+      "name": "六厘舎 東京ラーメンストリート店",
+      "country": "日本",
+      "area": "東京・丸之內",
+      "cuisine": "沾麵",
+      "price": "¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都千代田区丸の内1-9-1 東京駅一番街B1F",
+      "note": "東京車站拉麵街的濃厚魚介沾麵，一早就有朝沾麵。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%85%AD%E5%8E%98%E8%88%8E%20%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "matcha",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "soranoiro-nippon",
+      "name": "ソラノイロ NIPPON",
+      "country": "日本",
+      "area": "東京・丸之內",
+      "cuisine": "創意拉麵",
+      "price": "¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "東京都千代田区丸の内1-9-1 東京駅一番街B1F",
+      "note": "東京車站拉麵街裡的清爽系拉麵，細麵配溫和湯頭，也有蔬菜拉麵選項。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%BD%E3%83%A9%E3%83%8E%E3%82%A4%E3%83%AD%20NIPPON%20%E6%9D%B1%E4%BA%AC%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "matcha",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "nemuro-hanamaru-tokyo",
+      "name": "回転寿司 根室花まる",
+      "country": "日本",
+      "area": "東京・分店待選",
+      "cuisine": "迴轉壽司",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "根室花まる 東京",
+      "note": "北海道來的平價迴轉壽司，東京有丸之內 KITTE 等多間分店，分店未定。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%A0%B9%E5%AE%A4%E8%8A%B1%E3%81%BE%E3%82%8B%20%E6%9D%B1%E4%BA%AC",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "plum",
+      "discord_message_ids": ["1552706188708290560"]
+    },
+    {
+      "id": "mercer-brunch-tokyo",
+      "name": "MERCER BRUNCH",
+      "country": "日本",
+      "area": "東京・分店待選",
+      "cuisine": "早午餐",
+      "price": "¥¥",
+      "meal": "午餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-09-24",
+      "location": "MERCER BRUNCH 東京",
+      "note": "以厚片法式吐司聞名的早午餐店，東京有六本木、銀座等多間分店，分店未定。",
+      "verified": true,
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=MERCER%20BRUNCH%20%E6%9D%B1%E4%BA%AC",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "saffron",
+      "discord_message_ids": ["1552706188708290560"]
     }
   ],
   "guides": [
@@ -765,9 +1219,7 @@
       "tag": "商場情報",
       "source": "https://www.walkerland.com.tw/subject/view/424649",
       "note": "商場開幕與品牌整理文，屬於多店資訊，不混進單一餐廳卡。",
-      "discord_message_ids": [
-        "1537790480668958800"
-      ]
+      "discord_message_ids": ["1537790480668958800"]
     },
     {
       "id": "tokyo-trip-multi-shop-review",
@@ -775,10 +1227,8 @@
       "area": "東京・多地",
       "tag": "待拆分",
       "source": "https://www.threads.com/@evangeline_.17_.21/post/DcFdjn-Ea32",
-      "note": "貼文一次分享蛋包飯、甜點與鍋物等多間店，店名需要後續逐張辨識。",
-      "discord_message_ids": [
-        "1538508810430193747"
-      ]
+      "note": "貼文是東京旅行的照片合輯，稱讚蛋包飯與牛排飯，但內文沒有店名。留言中有其他網友（非原作者）回覆牛排飯可能是秋葉原的 Center Beef，原作者未確認；蛋包飯等其他店仍無線索，需要看圖片才能判斷。",
+      "discord_message_ids": ["1538508810430193747"]
     },
     {
       "id": "ho-chi-minh-city-food-guide",
@@ -787,9 +1237,7 @@
       "tag": "旅行攻略",
       "source": "https://www.dcard.tw/f/food/p/257796688",
       "note": "Dcard 多餐廳攻略，先留作越南行程入口，避免任意抽一間代表整篇。",
-      "discord_message_ids": [
-        "1539644908309057687"
-      ]
+      "discord_message_ids": ["1539644908309057687"]
     },
     {
       "id": "three-unconfirmed-recommendations",
@@ -806,11 +1254,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/BAcQeWtIOm/",
-      "note": "推薦者於 2026-08-10 分享一則 Threads 貼文並附上一張照片，貼文原始內容因平台存取限制無法讀取，尚未查得具體店名與地點，需要之後打開連結確認。",
-      "discord_message_ids": [
-        "1536394774570082304",
-        "1536395381175222283"
-      ]
+      "note": "Threads 分享短連結無法展開成貼文內容（兩種網域都只回傳空白頁），查不到作者、文字或店名，需要登入後直接打開連結確認。",
+      "discord_message_ids": ["1536394774570082304", "1536395381175222283"]
     },
     {
       "id": "nnnipapa-threads-lead",
@@ -818,10 +1263,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@nnnipapa/post/DcFkXglgd8B?xmt=AQG0LUbPoJkR_zRm3KTz7-JtQLIScXPyZaksXcQrBolVOg",
-      "note": "推薦者於 2026-08-16 分享 Threads 帳號 @nnnipapa 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1538486993216868372"
-      ]
+      "note": "貼文主題是日本便利商店必吃的漢堡排熟食，但文字沒寫哪一家超商或商品名，品項只在圖片中，需要看圖才能確認。",
+      "discord_message_ids": ["1538486993216868372"]
     },
     {
       "id": "liangpang-threads-lead",
@@ -829,10 +1272,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@liang.pang.514/post/DcFdWXSGPI7?xmt=AQG0LUbPoJkR_zRm3KTz7-JtQLIScXPyZaksXcQrBolVOg",
-      "note": "推薦者於 2026-08-16 分享 Threads 美食帳號 @liang.pang.514（涼涼．秘語探食趣）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1538506845545693194"
-      ]
+      "note": "貼文是作者整理自己喜歡的台北咖哩店並徵求北部推薦，文字沒有店名，店家只出現在圖片中，無法判斷推薦的是哪一間。",
+      "discord_message_ids": ["1538506845545693194"]
     },
     {
       "id": "threads-share-vhrl5r3u",
@@ -840,10 +1281,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/_vHRL5R3U/",
-      "note": "推薦者於 2026-08-16 分享一則 Threads 短連結，Discord 未能顯示任何預覽內容，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1538543324032536728"
-      ]
+      "note": "短連結指向運動攝影創作者 @h24jason 自己做的深夜壓扁漢堡影片，文中說明不是販售品，看不出對應哪間餐廳；帳號曾參與 Retro House 復古豪斯的漢堡活動，但不足以認定是那間店。",
+      "discord_message_ids": ["1538543324032536728"]
     },
     {
       "id": "ramen-hitoyama-lead",
@@ -851,10 +1290,8 @@
       "area": "日本・待確認",
       "tag": "需要線索",
       "source": "",
-      "note": "推薦者於 2026-08-17 在頻道中提到只吃「ラーメンひと山」這間拉麵店，但未附連結或地址，網路搜尋也查無明確分店資訊，需要之後確認實際地點。",
-      "discord_message_ids": [
-        "1538745751583203328"
-      ]
+      "note": "只提到店名「ラーメンひと山」，沒有地點。以日文店名與相近寫法搜尋都找不到對應的拉麵店，可能是記錯字，需要推薦者補充城市或正確漢字。",
+      "discord_message_ids": ["1538745751583203328"]
     },
     {
       "id": "hellosusu-threads-lead",
@@ -862,21 +1299,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@_hellosusu_/post/DcQs2TjFEPQ?xmt=AQG0cOg5H6zjXLKtpRmFodScbgLrH23mDWgZtM2awKUDhn7UKkhiSKlvRjwb7siOTRa3KG31",
-      "note": "推薦者於 2026-08-21 分享 Threads 帳號 @_hellosusu_ 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1540223405062889472"
-      ]
-    },
-    {
-      "id": "workcafe7514-threads-lead",
-      "title": "Threads 帳號 workcafe7514 分享的貼文（待確認）",
-      "area": "待確認",
-      "tag": "需要線索",
-      "source": "https://www.threads.com/@workcafe7514/post/DcZKGENEokd?xmt=AQG0E0GRQhrH3kr8E7WjIOoHtwrzt5KPX5kXJaNgibMrpdkOVAH3z27UkwB2PtdYZ_FvNsE&slof=1",
-      "note": "推薦者於 2026-08-24 分享 Threads 帳號 @workcafe7514 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1541301105294708766"
-      ]
+      "note": "貼文推薦台北某間店的干貝蝦膏燉飯（蝦膏與起司融合、偏奶香），但沒寫店名；以菜名搜尋未能鎖定單一餐廳，需要看圖或留言才能確認。",
+      "discord_message_ids": ["1540223405062889472"]
     },
     {
       "id": "happiotw77-threads-lead",
@@ -884,21 +1308,8 @@
       "area": "桃園／台北・待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/BAa1ATK2xT/",
-      "note": "推薦者於 2026-08-24 分享 Threads 帳號 @happiotw77（香🌼｜桃園 台北｜美好生活分享）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1541495848179863713"
-      ]
-    },
-    {
-      "id": "instagram-depcwbwsax4-lead",
-      "title": "Instagram 貼文分享（待確認）",
-      "area": "待確認",
-      "tag": "需要線索",
-      "source": "https://www.instagram.com/p/DEPCwbwsAX4/?igsi=aG5paWtiOHQwNXd1",
-      "note": "推薦者於 2026-08-27 分享一則 Instagram 貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1542373349622292581"
-      ]
+      "note": "貼文設為限定受眾，未登入無法查看；帳號是桃園台北的生活分享，除此之外沒有其他線索。",
+      "discord_message_ids": ["1541495848179863713"]
     },
     {
       "id": "casestw3-threads-lead",
@@ -906,10 +1317,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@casestw.3/post/DcjZ787E8Yu?xmt=AQG0PRSbbdwoab-OKuO4mpzhePGCnZ0tsBkFAkbceKt4gAub170dDDFCV1N2bN6A-INzUrMO&slof=1",
-      "note": "推薦者於 2026-09-08 分享 Threads 帳號 @casestw.3 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1546737215361654914"
-      ]
+      "note": "貼文是在問「東京有沒有值得為它再飛一次的店」的徵集文，本身沒有答案，候選店散在上千則留言中，沒有明確的推薦對象。",
+      "discord_message_ids": ["1546737215361654914"]
     },
     {
       "id": "ashy-chen-threads-lead",
@@ -917,10 +1326,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/BAJVyABbn-/",
-      "note": "推薦者於 2026-09-10 分享 Threads 帳號 Ashy Chen（@ashy.chen）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1547534815874523166"
-      ]
+      "note": "貼文標題是東京必吃美食，但文字沒有任何店名，內容都在圖片裡，需要看圖才能拆分。",
+      "discord_message_ids": ["1547534815874523166"]
     },
     {
       "id": "city-slowly-threads-lead",
@@ -928,10 +1335,8 @@
       "area": "台北・待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@city.slowly/post/DdFvjqRCYw2?xmt=AQG0e6j0USDXdyDbmV3OLdmD38JyGSs9huUsAE8ZcjHJNHX5DlssNS-cHBtonEh4ofoZjf8J&slof=1",
-      "note": "推薦者於 2026-09-10 分享 Threads 帳號 @city.slowly（City Slowly｜下班後的台北）的一則貼文，帳號主題聚焦下班後的台北生活，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1547674009385042050"
-      ]
+      "note": "貼文是徵求忠孝新生、華山一帶回訪餐廳的提問，原作者沒推薦特定店。留言中有具體資訊的候選包括 JAPOLI 義大利餐酒館新生店、EAT PIZZA 易披薩大安店，但都是網友回覆，是否為推薦者想分享的店仍待確認。",
+      "discord_message_ids": ["1547674009385042050"]
     },
     {
       "id": "iroha2masu-threads-lead",
@@ -939,10 +1344,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@iroha_2masu/post/DdI51qVEfxW?xmt=AQG0U6UoI0EeokbNZXrVojMM7XlSiYe2my4S3HBDOHBcYn0V9mczwHJ7YnIHm1WXOnTS9wQ&slof=1",
-      "note": "推薦者於 2026-09-13 分享 Threads 帳號 @iroha_2masu 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1548542789120163861"
-      ]
+      "note": "貼文只是在聊點壽司郎時的選擇困難，沒有指定分店，也看不出是台灣還是日本的壽司郎，無法建卡。",
+      "discord_message_ids": ["1548542789120163861"]
     },
     {
       "id": "dosifeystroynovskiy-threads-lead",
@@ -950,10 +1353,8 @@
       "area": "日本・待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@dosifeystroynovskiy_a5/post/DdO17r7k9Yv?xmt=AQG0GKxVjMfhvFH50gDYnQwnv1Tm-X2INwYtyy2koxa6hs3ThaAfrhLoNTaQxYDeGbSrmeHE&slof=1",
-      "note": "推薦者於 2026-09-14 分享 Threads 帳號 @dosifeystroynovskiy_a5（日本藥妝・生活好物）的一則貼文，帳號主題偏日本藥妝與生活用品，是否與餐廳推薦相關尚待確認，貼文內容因平台存取限制無法讀取。",
-      "discord_message_ids": [
-        "1548884804706242674"
-      ]
+      "note": "多次嘗試仍無法讀到這則貼文（抓取時只回傳該帳號其他無關貼文），帳號主題是日本藥妝與生活用品，是否與餐廳有關仍不確定。",
+      "discord_message_ids": ["1548884804706242674"]
     },
     {
       "id": "sherry-hhxuann-threads-lead",
@@ -961,10 +1362,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@hhxuann_/post/Dc24VOIj-q1?xmt=AQG0sgTRI1D_PDll69H-5UeGmJUSlmHpZW0KAC1oqPm54tzNT6jI9cvhI-ZChcJF64c7McpA&slof=1",
-      "note": "推薦者於 2026-09-14 分享 Threads 帳號 @hhxuann_（Sherry🍒）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1548892903525453954"
-      ]
+      "note": "貼文說在日本每次都要喝好幾杯某款飲料，但文字沒有飲料名或店名，只在圖片中，需要看圖確認。",
+      "discord_message_ids": ["1548892903525453954"]
     },
     {
       "id": "ningzhilanning-threads-lead",
@@ -972,10 +1371,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@ningzhilanning/post/DdTY6gGCXWF?xmt=AQG02mL9UJBEXOJAi46wW0R4yDz9gvNm6JuBTArkfRIXIzPguv4D6HUngskgNm-a2c3zjkQ&slof=1",
-      "note": "推薦者於 2026-09-16 分享 Threads 帳號 @ningzhilanning 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1549591683581091840"
-      ]
+      "note": "貼文是東京車站周邊 12 間免預約好店的圖文整理，文字與留言都沒有店名，需要逐張看圖才能拆分。",
+      "discord_message_ids": ["1549591683581091840"]
     },
     {
       "id": "gish-meal-photos-0919",
@@ -983,7 +1380,7 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "",
-      "note": "推薦者於 2026-09-19 連續分享 4 則訊息、共約 30 張餐點照片，但未附任何文字說明，圖片因 Discord 附件連結存取限制無法檢視，尚未查得店名與地點。",
+      "note": "推薦者連續貼了約 30 張餐點照片但沒有任何文字或連結，網路上無從查證，需要推薦者補充店名或地點。",
       "discord_message_ids": [
         "1550865836497965216",
         "1550865860615217185",
@@ -997,10 +1394,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@fattsai/post/DdiBz7MiX7K?xmt=AQG0gZ8lQcqKjnmbLNlHZrzRVct3lLZF7oxV35YhqPUlh1e_e4R7Y2mMxQPJTyxASH7JC7jW&slof=1",
-      "note": "推薦者於 2026-09-21 分享 Threads 帳號 @fattsai（蔡忠穎 歌手主持樂團）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1551517359137886320"
-      ]
+      "note": "貼文只寫了很喜歡吃牛舌，沒有店名或地點；同帳號 9/25 另一則貼文已查到是銀座ちかみつ，但無法確認這則是否同一間。",
+      "discord_message_ids": ["1551517359137886320"]
     },
     {
       "id": "itsbedooooo-threads-lead",
@@ -1008,21 +1403,17 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@itsbedooooo/post/DdlMTVLmMzg?xmt=AQG0DqRPU44dscoU4EAsMKjIwr1iJZZZZodhr9yEvpJi_M01yNCZWgyTfZ4HgD2DG17R4eUF&slof=1",
-      "note": "推薦者於 2026-09-22 分享 Threads 帳號 @itsbedooooo 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1551887842165391394"
-      ]
+      "note": "貼文是胡志明市旅遊美食的心得，說便宜又好吃，但沒有點名任何店家或料理，需要看圖確認。",
+      "discord_message_ids": ["1551887842165391394"]
     },
     {
       "id": "catmiss-jpkr-threads-lead",
-      "title": "旅遊帳號「貓小姐日本韓國旅遊」分享的貼文（待確認）",
-      "area": "日本／韓國・待確認",
+      "title": "東京必吃清單剩餘兩項（待確認）",
+      "area": "東京・待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/BAYQCOoRjW/",
-      "note": "推薦者於 2026-09-24 分享 Threads 帳號 @roolez553（貓小姐日本韓國旅遊）的一則貼文，帳號主題聚焦日韓旅遊美食，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1552706188708290560"
-      ]
+      "note": "貼文是 14 項東京美食清單，已拆成 11 間餐廳卡，AFURI（未寫分店）併入站上既有的 AFURI 卡。剩下兩項無法定案：澀谷的熟成和牛排飯只有料理描述，推測是センタービーフ渋谷宮益坂店但無法確認；築地的海膽丼推測是築地虎杖（うに虎）中通り店，但營業狀態與時間資訊互相矛盾。",
+      "discord_message_ids": ["1552706188708290560"]
     },
     {
       "id": "ina-foodaily-threads-lead",
@@ -1030,43 +1421,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/BAIcgD4EiN/",
-      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @ina_foodaily（Ina食記🥂旅遊｜咖啡廳｜美食）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1552878175607062548"
-      ]
-    },
-    {
-      "id": "nagoya-unagi-6shops-guide",
-      "title": "名古屋鰻魚三吃 6 家店家整理（待拆分）",
-      "area": "日本・名古屋",
-      "tag": "待拆分",
-      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
-      "note": "推薦者於 2026-09-25 分享 PTT Japan_Travel 板文章，整理名古屋 6 家關西風（不蒸、直接生烤）鰻魚三吃店家，文章內容因平台存取限制無法讀取完整店名清單，需要之後打開連結逐一拆分成個別餐廳卡。",
-      "discord_message_ids": [
-        "1552956987573141586"
-      ]
-    },
-    {
-      "id": "chun-foodieee-threads-lead",
-      "title": "食記帳號「阿君的吃貨日常」分享的貼文（待確認）",
-      "area": "台北／新北・待確認",
-      "tag": "需要線索",
-      "source": "https://www.threads.com/@chun.foodieee/post/DdqyLyVktBT?xmt=AQG0s0uDgihPubA5sfNFvUp6RcWkndFscZThSiyRvpcuhslS15nrwL79J8zVblI8Ui0ewkUU&slof=1",
-      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @chun.foodieee（阿君的吃貨日常｜台北美食 新北美食）的一則貼文，帳號主題聚焦台北、新北美食，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1552969962354642954"
-      ]
-    },
-    {
-      "id": "fattsai-beef-tongue-lead",
-      "title": "蔡忠穎（Threads）分享的牛舌料理貼文（待確認）",
-      "area": "待確認",
-      "tag": "需要線索",
-      "source": "https://www.threads.com/share/BASuf6wV_C/",
-      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @fattsai（蔡忠穎）的一則貼文並留言提到牛舌份量很大，可能是燒肉或牛舌專門店，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1552995527262474320"
-      ]
+      "note": "貼文推薦越南一間連續多年獲米其林推薦、和牛河粉很便宜的河粉店，但沒寫店名。最可能的候選是胡志明市第一郡的 Phở Việt Nam（米其林有收錄其和牛河粉），但屬推測，需確認店名與城市。",
+      "discord_message_ids": ["1552878175607062548"]
     },
     {
       "id": "fattsai-threads-lead-0925",
@@ -1074,33 +1430,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/@fattsai/post/DdrMpWxCbIl?xmt=AQG05qWAgtc06ttOkv0Ma5pMi73EXuX2CW-yEqoUmJnPO1cOJP9JN0ZHQTRXxR7ptnokmp-O&slof=1",
-      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @fattsai（蔡忠穎）另一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點，與同日稍早的牛舌貼文是否為同一間店尚待確認。",
-      "discord_message_ids": [
-        "1553020896963338260"
-      ]
-    },
-    {
-      "id": "jp-conbini-milktea-lead",
-      "title": "日本超商人氣奶茶整理（待拆分）",
-      "area": "日本・待確認",
-      "tag": "待拆分",
-      "source": "https://www.threads.com/share/DhrCcPv5M/",
-      "note": "推薦者於 2026-09-25 先分享一則 Threads 短連結（Discord 未顯示預覽），約 1 分鐘後再附上一張命名為「Japanese-convenience-popular-milk-tea-9」的圖片，研判是日本超商人氣奶茶整理文的其中一張圖，但因圖片與連結皆無法存取，尚未查得具體店名清單。",
-      "discord_message_ids": [
-        "1553052435306512468",
-        "1553052708091470025"
-      ]
-    },
-    {
-      "id": "suzuya-nagoya-lead",
-      "title": "Google 地圖地點「Suzuya」名古屋（待確認）",
-      "area": "日本・名古屋",
-      "tag": "需要線索",
-      "source": "https://maps.app.goo.gl/P2wUeGjRGowN7sWZ8",
-      "note": "推薦者於 2026-09-26 分享一個 Google 地圖短連結，地點名稱顯示為「Suzuya」，位於日本愛知縣名古屋市，但短連結無法展開查看完整地址，且名古屋同時有多間同名或近似名稱（鈴屋／鈴家／鈴の屋）分屬傢俱、烏龍麵、和食等不同業種，尚無法確認是哪一間店，需要之後打開連結確認。",
-      "discord_message_ids": [
-        "1553231589746675823"
-      ]
+      "note": "貼文文字只有一句讚嘆，沒有店名、地點或標記，內容在圖片中；與同日的銀座ちかみつ牛舌貼文是否同一間無法確認。",
+      "discord_message_ids": ["1553020896963338260"]
     },
     {
       "id": "ruhungri-threads-lead",
@@ -1108,10 +1439,8 @@
       "area": "待確認",
       "tag": "需要線索",
       "source": "https://www.threads.com/share/_yzo2xeQ4/",
-      "note": "推薦者於 2026-09-26 分享 Threads 帳號 @ruhungri（R U Hungri 你餓了嗎？）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
-      "discord_message_ids": [
-        "1553377087648170109"
-      ]
+      "note": "貼文是東京九天獨旅的美食照片合輯，文字沒有店名；作者在留言提到的池袋燒肉店是不想再去的，不算推薦。需要看圖才能辨識推薦的店。",
+      "discord_message_ids": ["1553377087648170109"]
     }
   ]
 }
