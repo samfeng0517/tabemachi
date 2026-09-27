@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 47,
+  "processed_message_count": 86,
   "restaurants": [
     {
       "id": "bogarts",
@@ -619,7 +619,9 @@
       "image_url": "images/newbabe.webp",
       "image_credit_url": "https://www.threads.com/@maggie0819741/post/DdKxmnmkltx",
       "color": "clay",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1548356929217232969"
+      ]
     },
     {
       "id": "koronagirai",
@@ -639,7 +641,9 @@
       "image_url": "images/koronagirai.webp",
       "image_credit_url": "https://www.threads.com/@amelia._0120/post/DdN9TZND2r_",
       "color": "matcha",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1548633496526786580"
+      ]
     },
     {
       "id": "quan-oc-63",
@@ -720,6 +724,28 @@
       "image_credit_url": "https://therefinerysaigon.com/",
       "color": "ocean",
       "discord_message_ids": []
+    },
+    {
+      "id": "suigun-okonomimura",
+      "name": "水軍（お好み村店）",
+      "country": "日本",
+      "area": "廣島・お好み村",
+      "cuisine": "廣島燒",
+      "price": "¥¥",
+      "meal": "全時段",
+      "author": "Sam517",
+      "date": "2026-09-27",
+      "location": "広島県広島市中区新天地5-13 お好み村 3F",
+      "note": "廣島燒美食村 3 樓的老店，老闆 1975 年在初代お好み村學藝出身，招牌「水軍海賊燒」加大蝦、花枝與蔥花。",
+      "verified": true,
+      "source": "https://journey.tw/okonomi-mura-suigun/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BA%83%E5%B3%B6%E5%B8%82%E4%B8%AD%E5%8C%BA%E6%96%B0%E5%A4%A9%E5%9C%B05-13%20%E3%81%8A%E5%A5%BD%E3%81%BF%E6%9D%91%203F",
+      "image_url": "",
+      "image_credit_url": "",
+      "color": "saffron",
+      "discord_message_ids": [
+        "1553447186140758077"
+      ]
     }
   ],
   "guides": [
@@ -739,7 +765,9 @@
       "tag": "商場情報",
       "source": "https://www.walkerland.com.tw/subject/view/424649",
       "note": "商場開幕與品牌整理文，屬於多店資訊，不混進單一餐廳卡。",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1537790480668958800"
+      ]
     },
     {
       "id": "tokyo-trip-multi-shop-review",
@@ -748,7 +776,9 @@
       "tag": "待拆分",
       "source": "https://www.threads.com/@evangeline_.17_.21/post/DcFdjn-Ea32",
       "note": "貼文一次分享蛋包飯、甜點與鍋物等多間店，店名需要後續逐張辨識。",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1538508810430193747"
+      ]
     },
     {
       "id": "ho-chi-minh-city-food-guide",
@@ -757,7 +787,9 @@
       "tag": "旅行攻略",
       "source": "https://www.dcard.tw/f/food/p/257796688",
       "note": "Dcard 多餐廳攻略，先留作越南行程入口，避免任意抽一間代表整篇。",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1539644908309057687"
+      ]
     },
     {
       "id": "three-unconfirmed-recommendations",
@@ -767,6 +799,319 @@
       "source": "",
       "note": "包含已失效 Threads 分享、台北咖哩與非賣品粉碎漢堡；線索不足所以沒有硬猜店名。",
       "discord_message_ids": []
+    },
+    {
+      "id": "obecne-threads-lead-0810",
+      "title": "Obecne 分享的美食貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAcQeWtIOm/",
+      "note": "推薦者於 2026-08-10 分享一則 Threads 貼文並附上一張照片，貼文原始內容因平台存取限制無法讀取，尚未查得具體店名與地點，需要之後打開連結確認。",
+      "discord_message_ids": [
+        "1536394774570082304",
+        "1536395381175222283"
+      ]
+    },
+    {
+      "id": "nnnipapa-threads-lead",
+      "title": "Threads 帳號 nnnipapa 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@nnnipapa/post/DcFkXglgd8B?xmt=AQG0LUbPoJkR_zRm3KTz7-JtQLIScXPyZaksXcQrBolVOg",
+      "note": "推薦者於 2026-08-16 分享 Threads 帳號 @nnnipapa 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1538486993216868372"
+      ]
+    },
+    {
+      "id": "liangpang-threads-lead",
+      "title": "美食帳號「涼涼．秘語探食趣」分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@liang.pang.514/post/DcFdWXSGPI7?xmt=AQG0LUbPoJkR_zRm3KTz7-JtQLIScXPyZaksXcQrBolVOg",
+      "note": "推薦者於 2026-08-16 分享 Threads 美食帳號 @liang.pang.514（涼涼．秘語探食趣）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1538506845545693194"
+      ]
+    },
+    {
+      "id": "threads-share-vhrl5r3u",
+      "title": "Obecne 分享的美食連結（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/_vHRL5R3U/",
+      "note": "推薦者於 2026-08-16 分享一則 Threads 短連結，Discord 未能顯示任何預覽內容，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1538543324032536728"
+      ]
+    },
+    {
+      "id": "ramen-hitoyama-lead",
+      "title": "拉麵店「ひと山」（待確認）",
+      "area": "日本・待確認",
+      "tag": "需要線索",
+      "source": "",
+      "note": "推薦者於 2026-08-17 在頻道中提到只吃「ラーメンひと山」這間拉麵店，但未附連結或地址，網路搜尋也查無明確分店資訊，需要之後確認實際地點。",
+      "discord_message_ids": [
+        "1538745751583203328"
+      ]
+    },
+    {
+      "id": "hellosusu-threads-lead",
+      "title": "Threads 帳號 _hellosusu_ 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@_hellosusu_/post/DcQs2TjFEPQ?xmt=AQG0cOg5H6zjXLKtpRmFodScbgLrH23mDWgZtM2awKUDhn7UKkhiSKlvRjwb7siOTRa3KG31",
+      "note": "推薦者於 2026-08-21 分享 Threads 帳號 @_hellosusu_ 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1540223405062889472"
+      ]
+    },
+    {
+      "id": "workcafe7514-threads-lead",
+      "title": "Threads 帳號 workcafe7514 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@workcafe7514/post/DcZKGENEokd?xmt=AQG0E0GRQhrH3kr8E7WjIOoHtwrzt5KPX5kXJaNgibMrpdkOVAH3z27UkwB2PtdYZ_FvNsE&slof=1",
+      "note": "推薦者於 2026-08-24 分享 Threads 帳號 @workcafe7514 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1541301105294708766"
+      ]
+    },
+    {
+      "id": "happiotw77-threads-lead",
+      "title": "生活分享帳號「香．桃園台北」分享的貼文（待確認）",
+      "area": "桃園／台北・待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAa1ATK2xT/",
+      "note": "推薦者於 2026-08-24 分享 Threads 帳號 @happiotw77（香🌼｜桃園 台北｜美好生活分享）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1541495848179863713"
+      ]
+    },
+    {
+      "id": "instagram-depcwbwsax4-lead",
+      "title": "Instagram 貼文分享（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/p/DEPCwbwsAX4/?igsi=aG5paWtiOHQwNXd1",
+      "note": "推薦者於 2026-08-27 分享一則 Instagram 貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1542373349622292581"
+      ]
+    },
+    {
+      "id": "casestw3-threads-lead",
+      "title": "Threads 帳號 casestw.3 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@casestw.3/post/DcjZ787E8Yu?xmt=AQG0PRSbbdwoab-OKuO4mpzhePGCnZ0tsBkFAkbceKt4gAub170dDDFCV1N2bN6A-INzUrMO&slof=1",
+      "note": "推薦者於 2026-09-08 分享 Threads 帳號 @casestw.3 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1546737215361654914"
+      ]
+    },
+    {
+      "id": "ashy-chen-threads-lead",
+      "title": "Ashy Chen（Threads）分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAJVyABbn-/",
+      "note": "推薦者於 2026-09-10 分享 Threads 帳號 Ashy Chen（@ashy.chen）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1547534815874523166"
+      ]
+    },
+    {
+      "id": "city-slowly-threads-lead",
+      "title": "生活帳號「City Slowly｜下班後的台北」分享的貼文（待確認）",
+      "area": "台北・待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@city.slowly/post/DdFvjqRCYw2?xmt=AQG0e6j0USDXdyDbmV3OLdmD38JyGSs9huUsAE8ZcjHJNHX5DlssNS-cHBtonEh4ofoZjf8J&slof=1",
+      "note": "推薦者於 2026-09-10 分享 Threads 帳號 @city.slowly（City Slowly｜下班後的台北）的一則貼文，帳號主題聚焦下班後的台北生活，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1547674009385042050"
+      ]
+    },
+    {
+      "id": "iroha2masu-threads-lead",
+      "title": "Threads 帳號 iroha_2masu 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@iroha_2masu/post/DdI51qVEfxW?xmt=AQG0U6UoI0EeokbNZXrVojMM7XlSiYe2my4S3HBDOHBcYn0V9mczwHJ7YnIHm1WXOnTS9wQ&slof=1",
+      "note": "推薦者於 2026-09-13 分享 Threads 帳號 @iroha_2masu 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1548542789120163861"
+      ]
+    },
+    {
+      "id": "dosifeystroynovskiy-threads-lead",
+      "title": "生活帳號「日本藥妝・生活好物」分享的貼文（待確認）",
+      "area": "日本・待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@dosifeystroynovskiy_a5/post/DdO17r7k9Yv?xmt=AQG0GKxVjMfhvFH50gDYnQwnv1Tm-X2INwYtyy2koxa6hs3ThaAfrhLoNTaQxYDeGbSrmeHE&slof=1",
+      "note": "推薦者於 2026-09-14 分享 Threads 帳號 @dosifeystroynovskiy_a5（日本藥妝・生活好物）的一則貼文，帳號主題偏日本藥妝與生活用品，是否與餐廳推薦相關尚待確認，貼文內容因平台存取限制無法讀取。",
+      "discord_message_ids": [
+        "1548884804706242674"
+      ]
+    },
+    {
+      "id": "sherry-hhxuann-threads-lead",
+      "title": "Sherry🍒（Threads）分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@hhxuann_/post/Dc24VOIj-q1?xmt=AQG0sgTRI1D_PDll69H-5UeGmJUSlmHpZW0KAC1oqPm54tzNT6jI9cvhI-ZChcJF64c7McpA&slof=1",
+      "note": "推薦者於 2026-09-14 分享 Threads 帳號 @hhxuann_（Sherry🍒）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1548892903525453954"
+      ]
+    },
+    {
+      "id": "ningzhilanning-threads-lead",
+      "title": "Threads 帳號 ningzhilanning 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@ningzhilanning/post/DdTY6gGCXWF?xmt=AQG02mL9UJBEXOJAi46wW0R4yDz9gvNm6JuBTArkfRIXIzPguv4D6HUngskgNm-a2c3zjkQ&slof=1",
+      "note": "推薦者於 2026-09-16 分享 Threads 帳號 @ningzhilanning 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1549591683581091840"
+      ]
+    },
+    {
+      "id": "gish-meal-photos-0919",
+      "title": "一組聚餐照片（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "",
+      "note": "推薦者於 2026-09-19 連續分享 4 則訊息、共約 30 張餐點照片，但未附任何文字說明，圖片因 Discord 附件連結存取限制無法檢視，尚未查得店名與地點。",
+      "discord_message_ids": [
+        "1550865836497965216",
+        "1550865860615217185",
+        "1550865891074515047",
+        "1550866041335185488"
+      ]
+    },
+    {
+      "id": "fattsai-threads-lead-0921",
+      "title": "蔡忠穎（Threads）分享的貼文（待確認・一）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@fattsai/post/DdiBz7MiX7K?xmt=AQG0gZ8lQcqKjnmbLNlHZrzRVct3lLZF7oxV35YhqPUlh1e_e4R7Y2mMxQPJTyxASH7JC7jW&slof=1",
+      "note": "推薦者於 2026-09-21 分享 Threads 帳號 @fattsai（蔡忠穎 歌手主持樂團）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1551517359137886320"
+      ]
+    },
+    {
+      "id": "itsbedooooo-threads-lead",
+      "title": "Threads 帳號 itsbedooooo 分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@itsbedooooo/post/DdlMTVLmMzg?xmt=AQG0DqRPU44dscoU4EAsMKjIwr1iJZZZZodhr9yEvpJi_M01yNCZWgyTfZ4HgD2DG17R4eUF&slof=1",
+      "note": "推薦者於 2026-09-22 分享 Threads 帳號 @itsbedooooo 的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1551887842165391394"
+      ]
+    },
+    {
+      "id": "catmiss-jpkr-threads-lead",
+      "title": "旅遊帳號「貓小姐日本韓國旅遊」分享的貼文（待確認）",
+      "area": "日本／韓國・待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAYQCOoRjW/",
+      "note": "推薦者於 2026-09-24 分享 Threads 帳號 @roolez553（貓小姐日本韓國旅遊）的一則貼文，帳號主題聚焦日韓旅遊美食，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1552706188708290560"
+      ]
+    },
+    {
+      "id": "ina-foodaily-threads-lead",
+      "title": "食記帳號「Ina食記」分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAIcgD4EiN/",
+      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @ina_foodaily（Ina食記🥂旅遊｜咖啡廳｜美食）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1552878175607062548"
+      ]
+    },
+    {
+      "id": "nagoya-unagi-6shops-guide",
+      "title": "名古屋鰻魚三吃 6 家店家整理（待拆分）",
+      "area": "日本・名古屋",
+      "tag": "待拆分",
+      "source": "https://www.ptt.cc/bbs/Japan_Travel/M.1790170430.A.89D.html",
+      "note": "推薦者於 2026-09-25 分享 PTT Japan_Travel 板文章，整理名古屋 6 家關西風（不蒸、直接生烤）鰻魚三吃店家，文章內容因平台存取限制無法讀取完整店名清單，需要之後打開連結逐一拆分成個別餐廳卡。",
+      "discord_message_ids": [
+        "1552956987573141586"
+      ]
+    },
+    {
+      "id": "chun-foodieee-threads-lead",
+      "title": "食記帳號「阿君的吃貨日常」分享的貼文（待確認）",
+      "area": "台北／新北・待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@chun.foodieee/post/DdqyLyVktBT?xmt=AQG0s0uDgihPubA5sfNFvUp6RcWkndFscZThSiyRvpcuhslS15nrwL79J8zVblI8Ui0ewkUU&slof=1",
+      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @chun.foodieee（阿君的吃貨日常｜台北美食 新北美食）的一則貼文，帳號主題聚焦台北、新北美食，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1552969962354642954"
+      ]
+    },
+    {
+      "id": "fattsai-beef-tongue-lead",
+      "title": "蔡忠穎（Threads）分享的牛舌料理貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BASuf6wV_C/",
+      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @fattsai（蔡忠穎）的一則貼文並留言提到牛舌份量很大，可能是燒肉或牛舌專門店，但貼文內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1552995527262474320"
+      ]
+    },
+    {
+      "id": "fattsai-threads-lead-0925",
+      "title": "蔡忠穎（Threads）分享的貼文（待確認・二）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@fattsai/post/DdrMpWxCbIl?xmt=AQG05qWAgtc06ttOkv0Ma5pMi73EXuX2CW-yEqoUmJnPO1cOJP9JN0ZHQTRXxR7ptnokmp-O&slof=1",
+      "note": "推薦者於 2026-09-25 分享 Threads 帳號 @fattsai（蔡忠穎）另一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點，與同日稍早的牛舌貼文是否為同一間店尚待確認。",
+      "discord_message_ids": [
+        "1553020896963338260"
+      ]
+    },
+    {
+      "id": "jp-conbini-milktea-lead",
+      "title": "日本超商人氣奶茶整理（待拆分）",
+      "area": "日本・待確認",
+      "tag": "待拆分",
+      "source": "https://www.threads.com/share/DhrCcPv5M/",
+      "note": "推薦者於 2026-09-25 先分享一則 Threads 短連結（Discord 未顯示預覽），約 1 分鐘後再附上一張命名為「Japanese-convenience-popular-milk-tea-9」的圖片，研判是日本超商人氣奶茶整理文的其中一張圖，但因圖片與連結皆無法存取，尚未查得具體店名清單。",
+      "discord_message_ids": [
+        "1553052435306512468",
+        "1553052708091470025"
+      ]
+    },
+    {
+      "id": "suzuya-nagoya-lead",
+      "title": "Google 地圖地點「Suzuya」名古屋（待確認）",
+      "area": "日本・名古屋",
+      "tag": "需要線索",
+      "source": "https://maps.app.goo.gl/P2wUeGjRGowN7sWZ8",
+      "note": "推薦者於 2026-09-26 分享一個 Google 地圖短連結，地點名稱顯示為「Suzuya」，位於日本愛知縣名古屋市，但短連結無法展開查看完整地址，且名古屋同時有多間同名或近似名稱（鈴屋／鈴家／鈴の屋）分屬傢俱、烏龍麵、和食等不同業種，尚無法確認是哪一間店，需要之後打開連結確認。",
+      "discord_message_ids": [
+        "1553231589746675823"
+      ]
+    },
+    {
+      "id": "ruhungri-threads-lead",
+      "title": "食記帳號「R U Hungri 你餓了嗎？」分享的貼文（待確認）",
+      "area": "待確認",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/_yzo2xeQ4/",
+      "note": "推薦者於 2026-09-26 分享 Threads 帳號 @ruhungri（R U Hungri 你餓了嗎？）的一則貼文，內容因平台存取限制無法讀取，尚未查得具體店名與地點。",
+      "discord_message_ids": [
+        "1553377087648170109"
+      ]
     }
   ]
 }
