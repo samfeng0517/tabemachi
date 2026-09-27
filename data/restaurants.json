@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 86,
+  "processed_message_count": 93,
   "restaurants": [
     {
       "id": "bogarts",
@@ -459,7 +459,7 @@
       "image_url": "images/kohinoor.webp",
       "image_credit_url": "https://www.threads.com/@boringstupidwalk/post/DctAOyIAXWZ",
       "color": "saffron",
-      "discord_message_ids": []
+      "discord_message_ids": ["1544259067050983445", "1544259086105976883", "1544259113368813568", "1544259149062344714", "1544259198617915412", "1544259250111512578"]
     },
     {
       "id": "burning-burger",
@@ -819,7 +819,7 @@
       "image_url": "https://ginza-chikamitsu.com/wp-content/uploads/2021/10/g_2110_interior_3_aisle.jpg",
       "image_credit_url": "https://ginza-chikamitsu.com/gallery_menu/",
       "color": "ocean",
-      "discord_message_ids": ["1552995527262474320"]
+      "discord_message_ids": ["1552995527262474320", "1552995547231821887"]
     },
     {
       "id": "lawson-karaagekun-shiokombu",
