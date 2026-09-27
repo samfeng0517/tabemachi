@@ -212,16 +212,105 @@ test("cleanUrl should keep non-tracking params when present", () => {
   assert.equal(result, "https://example.com/search?q=ramen&page=2#section");
 });
 
-test("should contain 36 restaurants and 5 guides when migration is complete", () => {
-  const data = JSON.parse(readFileSync(dataPath, "utf8"));
-  assert.equal(data.restaurants.length, 36);
-  assert.equal(data.guides.length, 5);
-});
+// Ids present when the legacy site was migrated. New items may be added by
+// the routine or by hand; these must never disappear.
+const LEGACY_RESTAURANT_IDS = [
+  "bogarts",
+  "top-seafood",
+  "orange",
+  "ikki",
+  "kinkan",
+  "nonkiya",
+  "matsuya",
+  "yaekatsu",
+  "mura",
+  "nekomasa",
+  "maikoga",
+  "burnt",
+  "mensho",
+  "tsukimi",
+  "kumo",
+  "afuri",
+  "zhishuang",
+  "shingen",
+  "butayama",
+  "benjamin",
+  "laomiandian",
+  "karasemitei",
+  "kohinoor",
+  "burning-burger",
+  "tsuruichi",
+  "la-brasserie",
+  "sushi-ichida",
+  "sakanakun-taipei-station",
+  "menya-hanabi-taipei",
+  "erbensong",
+  "newbabe",
+  "koronagirai",
+  "quan-oc-63",
+  "luigi-laundry-anhe",
+  "agito-hirao",
+  "the-refinery-saigon",
+];
+const LEGACY_GUIDE_IDS = [
+  "taiwan-dating-tier-list",
+  "sogo-taipei-dome-food-guide",
+  "tokyo-trip-multi-shop-review",
+  "ho-chi-minh-city-food-guide",
+  "three-unconfirmed-recommendations",
+];
 
-test("should reference an existing image file for every restaurant when migration is complete", () => {
-  const data = JSON.parse(readFileSync(dataPath, "utf8"));
+// Checks are parameterized by data so they run on both the real file and
+// an augmented copy that simulates a routine run.
+function assertLegacyItemsPresent(data) {
+  const restaurantIds = new Set(data.restaurants.map((r) => r.id));
+  const guideIds = new Set(data.guides.map((g) => g.id));
+  for (const id of LEGACY_RESTAURANT_IDS) {
+    assert.ok(restaurantIds.has(id), `missing legacy restaurant ${id}`);
+  }
+  for (const id of LEGACY_GUIDE_IDS) {
+    assert.ok(guideIds.has(id), `missing legacy guide ${id}`);
+  }
+}
+
+// Only local images (committed under images/) must exist on disk; external
+// https images are allowed to be missing locally.
+function assertLocalImagesExist(data) {
   for (const restaurant of data.restaurants) {
-    const imagePath = path.join(imagesDir, `${restaurant.id}.webp`);
+    if (!restaurant.image_url.startsWith("images/")) continue;
+    const imagePath = path.join(
+      imagesDir,
+      restaurant.image_url.slice("images/".length),
+    );
     assert.ok(existsSync(imagePath), `missing image for ${restaurant.id}`);
   }
+}
+
+// Real data plus one routine-style restaurant with an external image.
+function makeAugmentedData() {
+  const data = JSON.parse(readFileSync(dataPath, "utf8"));
+  data.restaurants.push(
+    makeRestaurant({
+      id: "routine-added-restaurant",
+      image_url: "https://example.com/photo.jpg",
+      discord_message_ids: ["12345678901234567"],
+    }),
+  );
+  data.processed_message_count += 1;
+  return data;
+}
+
+test("should keep every migrated legacy item when new items are added", () => {
+  assertLegacyItemsPresent(JSON.parse(readFileSync(dataPath, "utf8")));
+});
+
+test("should reference an existing image file when image_url is a local path", () => {
+  assertLocalImagesExist(JSON.parse(readFileSync(dataPath, "utf8")));
+});
+
+test("should pass the data checks when a restaurant with an external image is appended", () => {
+  const data = makeAugmentedData();
+  assert.deepEqual(validateData(data), []);
+  assertLegacyItemsPresent(data);
+  assertLocalImagesExist(data);
 });
