@@ -17,6 +17,11 @@ const PRICE_PATTERN = /^(\${1,4}|¥{1,3})$/;
 const MESSAGE_ID_PATTERN = /^\d{17,20}$/;
 const TRACKING_PARAM_PATTERN = /^utm_/i;
 const TRACKING_PARAM_NAMES = new Set(["fbclid", "igsh", "igshid"]);
+// Discord links (message permalinks, attachment CDN) expose private channel
+// content or expire, so no URL field may point at them. Subdomains such as
+// cdn.discordapp.com and media.discordapp.net are covered by suffix match.
+const DISCORD_DOMAINS = ["discord.com", "discordapp.com", "discordapp.net"];
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 /**
  * Strips tracking query params (utm_*, fbclid, igsh, igshid) from a URL,
@@ -50,6 +55,26 @@ function isHttpsUrl(value) {
     return new URL(value).protocol === "https:";
   } catch {
     return false;
+  }
+}
+
+function isDiscordUrl(value) {
+  let hostname;
+  try {
+    hostname = new URL(value).hostname.toLowerCase();
+  } catch {
+    return false;
+  }
+  return DISCORD_DOMAINS.some(
+    (domain) => hostname === domain || hostname.endsWith(`.${domain}`),
+  );
+}
+
+function rejectDiscordUrl(value, field, label, errors) {
+  if (isDiscordUrl(value)) {
+    errors.push(
+      `${label}: "${field}" must not point to discord (got "${value}")`,
+    );
   }
 }
 
@@ -109,6 +134,16 @@ function validateDate(date, label, errors) {
     parsed.getUTCDate() === day;
   if (!isValidCalendarDate) {
     errors.push(`${label}: date "${date}" is not a valid calendar date`);
+    return;
+  }
+  // Allow one day of slack so a Taipei-local date (UTC+8) is never rejected.
+  const latestAllowed = new Date(Date.now() + DAY_MS)
+    .toISOString()
+    .slice(0, 10);
+  if (date > latestAllowed) {
+    errors.push(
+      `${label}: date "${date}" must not be later than ${latestAllowed} (today + 1 day, UTC)`,
+    );
   }
 }
 
@@ -116,10 +151,12 @@ function validateHttpsUrl(value, field, label, errors) {
   if (!isHttpsUrl(value)) {
     errors.push(`${label}: "${field}" must be an https URL (got "${value}")`);
   }
+  rejectDiscordUrl(value, field, label, errors);
 }
 
 function validateHttpsOrEmptyUrl(value, field, label, errors) {
   if (value === "") return;
+  rejectDiscordUrl(value, field, label, errors);
   if (!isHttpsUrl(value)) {
     errors.push(
       `${label}: "${field}" must be an https URL or an empty string (got "${value}")`,
@@ -129,6 +166,7 @@ function validateHttpsOrEmptyUrl(value, field, label, errors) {
 
 function validateImageUrl(value, id, label, errors) {
   if (value === "") return;
+  rejectDiscordUrl(value, "image_url", label, errors);
   if (isHttpsUrl(value)) return;
   if (typeof id === "string" && value === `images/${id}.webp`) return;
   errors.push(

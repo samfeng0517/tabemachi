@@ -144,6 +144,62 @@ test("validateData should report an error when price mixes currency symbols", ()
   assert.ok(errors.length > 0);
 });
 
+test("validateData should report an error when a url points to discord", () => {
+  const discordUrls = [
+    "https://discord.com/channels/1/2/3",
+    "https://discordapp.com/channels/1/2/3",
+    "https://cdn.discordapp.com/attachments/1/2/photo.jpg",
+    "https://media.discordapp.net/attachments/1/2/photo.jpg",
+    "https://images-ext-1.discordapp.net/external/abc/photo.jpg",
+  ];
+  for (const url of discordUrls) {
+    for (const field of [
+      "source",
+      "map_url",
+      "image_url",
+      "image_credit_url",
+    ]) {
+      const data = makeData({
+        restaurants: [makeRestaurant({ [field]: url })],
+      });
+      const errors = validateData(data);
+      assert.ok(
+        errors.some((e) => e.includes(field) && e.includes("discord")),
+        `expected a discord error for restaurant ${field}=${url}`,
+      );
+    }
+    const data = makeData({ guides: [makeGuide({ source: url })] });
+    const errors = validateData(data);
+    assert.ok(
+      errors.some((e) => e.includes("source") && e.includes("discord")),
+      `expected a discord error for guide source=${url}`,
+    );
+  }
+});
+
+test("validateData should accept a url when its host only resembles discord", () => {
+  const data = makeData({
+    restaurants: [makeRestaurant({ source: "https://notdiscord.com/post" })],
+  });
+  const errors = validateData(data);
+  assert.deepEqual(errors, []);
+});
+
+test("validateData should report an error when date is later than tomorrow", () => {
+  const data = makeData({
+    restaurants: [makeRestaurant({ date: "2999-01-01" })],
+  });
+  const errors = validateData(data);
+  assert.ok(errors.some((e) => e.includes("2999-01-01")));
+});
+
+test("validateData should accept a date when it is today in UTC", () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const data = makeData({ restaurants: [makeRestaurant({ date: today })] });
+  const errors = validateData(data);
+  assert.deepEqual(errors, []);
+});
+
 test("cleanUrl should strip igsh and utm params when present", () => {
   const result = cleanUrl(
     "https://example.com/post?igsh=abc123&utm_source=ig&utm_medium=share&id=42",

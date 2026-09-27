@@ -4,15 +4,16 @@
 
 ## 修改資料時的規則
 
-- 開始編輯前，先執行 `git pull --rebase`，確保本地是最新的 `main`（避免跟每週排程或其他 session 的變更衝突）。
-- 使用者要求修改餐廳 / 攻略資料時，**只修改 `data/restaurants.json`**（必要時可一併新增 / 調整 `images/` 底下的圖片檔案）。除非使用者明確要求改網站外觀或程式，不要動 `index.html`、`assets/`、`scripts/`、`ROUTINE.md` 等其他檔案。
-- 保持既有 schema：欄位定義見 `scripts/lib/schema.mjs`；不要新增 schema 未定義的欄位，也不要拿掉必要欄位。
+- 開始編輯前，先執行 `git fetch origin main && git checkout -B main origin/main`，確保工作副本就是最新的遠端 `main`（工作階段可能一開始停在 `claude/...` 等其他分支；這也避免跟每週排程或其他 session 的變更衝突）。
+- 使用者要求修改餐廳 / 攻略資料時，**只修改 `data/restaurants.json`**（必要時可一併新增 / 調整 `images/` 底下的圖片檔案；不要在 `data/` 底下新增其他檔案，網站只會發布 `data/restaurants.json`）。除非使用者明確要求改網站外觀或程式，不要動 `index.html`、`assets/`、`scripts/`、`ROUTINE.md` 等其他檔案。
+- 保持既有 schema：欄位定義見 `scripts/lib/schema.mjs`；不要新增 schema 未定義的欄位，也不要拿掉必要欄位。任何 URL 欄位都只能是 `https://`，且不得指向 Discord（`discord.com`、`discordapp.com`、`discordapp.net` 及其子網域）。
 - 修改完成後，依序執行：
   1. `node scripts/validate.mjs data/restaurants.json`
   2. `npm test`
   - 兩者都必須通過才可以繼續；若有錯誤，先修正資料再重試。
-- 通過檢查後，直接 commit 並 `git push origin main`（不另開分支、不開 PR，直接發布到正式網站）。
-- push 完成後，告知使用者網站會在幾分鐘內更新（GitHub Pages 部署需要一點時間）。
+- 通過檢查後，直接 commit 並 `git push origin HEAD:main`（不另開分支、不開 PR，直接發布到正式網站；永遠不要 force push）。
+- push 後執行 `node scripts/verify-pushed.mjs`，exit 0（本地 `HEAD` 與遠端 `main` 相同）才算發布成功；「Everything up-to-date」不代表已發布。
+- 確認發布後，告知使用者網站會在幾分鐘內更新（GitHub Pages 部署需要一點時間）。
 
 ## UI / 網站程式異動
 

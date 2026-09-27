@@ -1,44 +1,58 @@
 #!/usr/bin/env node
-// CLI + library: verify that a set of changed files stays within data/.
-// The weekly Discord sync routine is only allowed to touch data/restaurants.json
-// (or other files under data/); this guards against it accidentally editing
-// site code or rule files.
+// CLI + library: verify that every change stays within the single allowed
+// file, data/restaurants.json. The weekly Discord sync routine is only
+// allowed to touch that file; this guards against it accidentally editing
+// site code, rule files, or dropping new files anywhere (including data/).
 // Usage: node scripts/check-scope.mjs [base-ref]  (default base-ref: origin/main)
+// Run it both before committing and again after committing (before pushing):
+// it checks committed, staged, unstaged, and untracked changes relative to
+// the merge base of base-ref and HEAD.
 
 import { execFileSync } from "node:child_process";
 import { pathToFileURL } from "node:url";
 import { realpathSync } from "node:fs";
 
-const IN_SCOPE_PREFIX = "data/";
+const ALLOWED_PATH = "data/restaurants.json";
 
 /**
- * Returns the subset of `paths` that fall outside the allowed `data/` scope.
+ * Returns the subset of `paths` that are not the single allowed data file.
  * Paths are normalized by stripping a leading "./" before comparison.
  */
 export function outOfScope(paths) {
   return paths
     .map((p) => p.replace(/^\.\//, ""))
-    .filter((p) => p !== "data" && !p.startsWith(IN_SCOPE_PREFIX));
+    .filter((p) => p !== ALLOWED_PATH);
 }
 
 function git(args, options) {
   return execFileSync("git", args, { encoding: "utf8", ...options }).trim();
 }
 
+function splitLines(output) {
+  return output ? output.split("\n") : [];
+}
+
 // Lists every changed path relative to the merge base of `baseRef` and HEAD
-// (not `baseRef` itself): committed differences since the two branches
-// diverged, staged/unstaged working tree changes (all covered by
-// `git diff <merge-base>`), plus untracked new files. Diffing against the
-// merge base (rather than the possibly-moving `baseRef` tip) avoids flagging
-// unrelated files that a concurrent, non-data push to `baseRef` may have
-// touched after this run's HEAD diverged from it.
+// (not `baseRef` itself, so a concurrent non-data push to `baseRef` after
+// this run's HEAD diverged is not flagged). Collected separately so that no
+// source can mask another:
+//   - committed range (merge base -> HEAD),
+//   - index vs merge base (catches staged changes whose working tree copy
+//     was restored),
+//   - working tree vs merge base (catches unstaged edits),
+//   - untracked files.
+// `--no-renames` reports a move as delete + add, so moving a file into the
+// allowed location still flags the original path.
 function listChangedPaths(baseRef) {
   const mergeBase = git(["merge-base", baseRef, "HEAD"]);
-  const diffOutput = git(["diff", "--name-only", mergeBase]);
-  const untrackedOutput = git(["ls-files", "--others", "--exclude-standard"]);
-  const diffPaths = diffOutput ? diffOutput.split("\n") : [];
-  const untrackedPaths = untrackedOutput ? untrackedOutput.split("\n") : [];
-  return [...new Set([...diffPaths, ...untrackedPaths])].filter(Boolean);
+  const sources = [
+    ["diff", "--name-only", "--no-renames", mergeBase, "HEAD"],
+    ["diff", "--cached", "--name-only", "--no-renames", mergeBase],
+    ["diff", "--name-only", "--no-renames", mergeBase],
+    ["ls-files", "--others", "--exclude-standard"],
+  ];
+  const paths = sources.flatMap((args) => splitLines(git(args)));
+  return [...new Set(paths)].filter(Boolean);
 }
 
 function main() {
@@ -58,7 +72,9 @@ function main() {
   const offending = outOfScope(changedPaths);
 
   if (offending.length > 0) {
-    console.error("Out-of-scope changes detected (only data/ is allowed):");
+    console.error(
+      `Out-of-scope changes detected (only ${ALLOWED_PATH} is allowed):`,
+    );
     for (const path of offending) {
       console.error(`  ${path}`);
     }
@@ -66,7 +82,9 @@ function main() {
     return;
   }
 
-  console.log(`OK: ${changedPaths.length} file(s) changed, all under data/`);
+  console.log(
+    `OK: ${changedPaths.length} file(s) changed, all within ${ALLOWED_PATH}`,
+  );
   process.exitCode = 0;
 }
 

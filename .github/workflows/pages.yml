@@ -35,8 +35,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      # Explicit allow-list: only these paths are ever published. Anything
+      # else in the repo (including other files under data/) stays private.
       - name: Stage site
-        run: rsync -a --exclude='.git' --exclude='.github' --exclude='scripts' --exclude='tests' --exclude='*.md' --exclude='package.json' --exclude='.gitignore' ./ _site/
+        run: |
+          mkdir -p _site/data
+          cp index.html _site/
+          cp -R assets images _site/
+          cp data/restaurants.json _site/data/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
