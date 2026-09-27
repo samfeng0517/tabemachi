@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#f4ecdf"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#18130f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>食候 TABEMACHI｜朋友推薦、等著一起去吃的店</title>
+    <meta
+      name="description"
+      content="食候：朋友們在 Discord 推薦過、還沒一起去吃的餐廳清單。依國家、地區、料理與時段挑一間，排進下一趟行程。"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script type="module" src="assets/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#results">跳到餐廳清單</a>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <p class="kicker">朋友推薦・待吃清單</p>
+        <h1 class="brand">
+          <span class="brand-mark">食候</span>
+          <span class="brand-latin">TABEMACHI</span>
+        </h1>
+        <p class="lede">
+          朋友在群組丟過的好店，全收在這裡。挑一間，排進下一趟行程。
+        </p>
+        <dl class="stats" aria-label="清單統計">
+          <div class="stat">
+            <dt>則推薦訊息</dt>
+            <dd data-stat="messages">–</dd>
+          </div>
+          <div class="stat">
+            <dt>間餐廳</dt>
+            <dd data-stat="restaurants">–</dd>
+          </div>
+          <div class="stat">
+            <dt>座城市</dt>
+            <dd data-stat="cities">–</dd>
+          </div>
+          <div class="stat">
+            <dt>位推薦人</dt>
+            <dd data-stat="recommenders">–</dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <main>
+      <section class="browse" aria-labelledby="browse-title">
+        <h2 id="browse-title" class="visually-hidden">餐廳清單</h2>
+
+        <div class="toolbar">
+          <div class="toolbar-inner">
+            <label class="search">
+              <span class="visually-hidden">搜尋店名、地區、料理或備註</span>
+              <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" />
+                <path d="m16 16 4.5 4.5" />
+              </svg>
+              <input
+                id="query"
+                type="search"
+                placeholder="搜尋店名、地區、料理…"
+                autocomplete="off"
+                enterkeyhint="search"
+              />
+            </label>
+            <div class="toolbar-actions">
+              <button
+                id="filter-toggle"
+                class="btn btn-filter"
+                type="button"
+                aria-expanded="false"
+                aria-controls="filters"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 7h16M7 12h10M10 17h4" />
+                </svg>
+                <span>篩選</span>
+                <span id="filter-count" class="count-badge" hidden></span>
+              </button>
+              <label class="sort">
+                <span class="visually-hidden">排序方式</span>
+                <select id="sort">
+                  <option value="newest">最新加入</option>
+                  <option value="name">名稱</option>
+                  <option value="price">價格較低</option>
+                </select>
+              </label>
+              <div class="view-toggle" role="group" aria-label="顯示方式">
+                <button
+                  type="button"
+                  class="btn-icon"
+                  data-view="grid"
+                  aria-pressed="true"
+                  aria-label="卡片檢視"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="4" width="7" height="7" rx="1.5" />
+                    <rect x="13" y="4" width="7" height="7" rx="1.5" />
+                    <rect x="4" y="13" width="7" height="7" rx="1.5" />
+                    <rect x="13" y="13" width="7" height="7" rx="1.5" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="btn-icon"
+                  data-view="list"
+                  aria-pressed="false"
+                  aria-label="列表檢視"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9 6h11M9 12h11M9 18h11" />
+                    <circle cx="4.5" cy="6" r="1.2" />
+                    <circle cx="4.5" cy="12" r="1.2" />
+                    <circle cx="4.5" cy="18" r="1.2" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="browse-body">
+          <div id="filters-scrim" class="scrim" hidden></div>
+          <aside
+            id="filters"
+            class="filters"
+            aria-label="篩選條件"
+            tabindex="-1"
+          >
+            <div class="filters-head">
+              <h3>篩選</h3>
+              <button id="clear-filters" type="button" class="btn-text">
+                清除
+              </button>
+            </div>
+
+            <fieldset class="facet">
+              <legend>國家</legend>
+              <div class="chips" data-facet="country"></div>
+            </fieldset>
+
+            <div class="facet">
+              <label class="facet-label" for="area">地區</label>
+              <select id="area" data-facet-select="area"></select>
+            </div>
+
+            <fieldset class="facet">
+              <legend>料理</legend>
+              <div class="chips" data-facet="cuisineGroup"></div>
+              <label class="visually-hidden" for="cuisine">料理細項</label>
+              <select id="cuisine" data-facet-select="cuisine"></select>
+            </fieldset>
+
+            <fieldset class="facet">
+              <legend>時段</legend>
+              <div class="chips" data-facet="meal"></div>
+            </fieldset>
+
+            <div class="facet">
+              <label class="switch">
+                <input id="favorites-only" type="checkbox" />
+                <span class="switch-track" aria-hidden="true"></span>
+                <span>只看收藏</span>
+              </label>
+            </div>
+
+            <div class="filters-foot">
+              <button id="filters-done" type="button" class="btn btn-primary">
+                顯示結果
+              </button>
+            </div>
+          </aside>
+
+          <div class="results" id="results" tabindex="-1">
+            <p
+              id="result-summary"
+              class="result-summary"
+              aria-live="polite"
+            ></p>
+            <ul id="restaurant-list" class="cards" data-view="grid"></ul>
+            <div id="empty-state" class="empty-state" hidden>
+              <p class="empty-title">這個組合還沒有人推薦過</p>
+              <p>換個條件試試，或是</p>
+              <button id="empty-clear" type="button" class="btn">
+                清除所有篩選
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="guides" aria-labelledby="guides-title">
+        <div class="section-head">
+          <p class="kicker">另外收著的</p>
+          <h2 id="guides-title">攻略與待確認</h2>
+          <p class="section-lede">
+            多店攻略、商場情報，還有線索不夠、還認不出店名的推薦。先留著，不硬塞成單一餐廳卡。
+          </p>
+        </div>
+        <ol id="guide-list" class="guide-list"></ol>
+      </section>
+
+      <section class="curation" aria-labelledby="curation-title">
+        <h2 id="curation-title">這份清單怎麼來的</h2>
+        <p>
+          朋友在 Discord 頻道隨手丟的推薦，每週由 Claude
+          例行整理一次：合併重複的店、補上地圖與照片、標出還沒查證的分店。
+          看到「待確認」就代表資訊還不完整，出發前記得再查一下。
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">食候 <span>TABEMACHI</span></p>
+      <p>最後更新：<time id="last-updated">—</time></p>
+    </footer>
+  </body>
+</html>
