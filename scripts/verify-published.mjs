@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// CLI: the deletion gate for the weekly routine. Fetches origin/main and
+// CLI: the deletion gate for the weekly routine. Fetches remote main and
 // confirms that every given Discord message id appears in some restaurant or
-// guide `discord_message_ids` of the *published* data file. A matching HEAD
+// guide `discord_message_ids` of the *published* data file (FETCH_HEAD). A matching HEAD
 // alone is not enough (e.g. after a reset to origin/main or an empty commit),
 // so this checks the ids themselves.
 // Usage: node scripts/verify-published.mjs <message-id> [<message-id> ...]
@@ -9,7 +9,9 @@
 
 import { execFileSync } from "node:child_process";
 
-const DATA_REF = "origin/main:data/restaurants.json";
+// Read what `git fetch origin main` just fetched. FETCH_HEAD cannot be
+// shadowed by a local branch or tag named "origin/main".
+const DATA_REF = "FETCH_HEAD:data/restaurants.json";
 
 function git(args) {
   return execFileSync("git", args, {
@@ -50,10 +52,12 @@ const published = publishedIds(data);
 const missing = ids.filter((id) => !published.has(id));
 
 if (missing.length > 0) {
-  console.error("NOT PUBLISHED: these ids are missing from origin/main data:");
+  console.error(
+    "NOT PUBLISHED: these ids are missing from the fetched remote main data:",
+  );
   for (const id of missing) console.error(`  ${id}`);
   process.exit(1);
 }
 
-console.log(`OK: all ${ids.length} id(s) are in origin/main data`);
+console.log(`OK: all ${ids.length} id(s) are in the fetched remote main data`);
 process.exit(0);

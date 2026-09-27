@@ -67,8 +67,9 @@ function isHttpsUrl(value) {
 function isDiscordUrl(value) {
   let hostname;
   try {
-    // A trailing dot ("discord.com.") is the same host in DNS terms.
-    hostname = new URL(value).hostname.toLowerCase().replace(/\.$/, "");
+    // Trailing dots ("discord.com.", "discord.com..") still reach the same
+    // host, so strip all of them before matching.
+    hostname = new URL(value).hostname.toLowerCase().replace(/\.+$/, "");
   } catch {
     return false;
   }

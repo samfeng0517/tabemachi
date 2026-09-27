@@ -116,6 +116,21 @@ test("should exit 0 when every id is in the remote data", () => {
   }
 });
 
+test("should exit 1 when a local branch named origin/main contains the ids but the remote does not", () => {
+  const { rootDir, cloneDir, git, writeData } = makeClone();
+  try {
+    writeData([PUBLISHED_ID, NEW_ID]);
+    git(cloneDir, ["commit", "-am", "unpublished data change"]);
+    // refs/heads/origin/main shadows refs/remotes/origin/main in rev parsing.
+    git(cloneDir, ["branch", "origin/main", "HEAD"]);
+    const result = runVerifyPublished(cloneDir, [NEW_ID]);
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, new RegExp(NEW_ID));
+  } finally {
+    rmSync(rootDir, { recursive: true, force: true });
+  }
+});
+
 test("should exit 1 when no ids are given", () => {
   const { rootDir, cloneDir } = makeClone();
   try {

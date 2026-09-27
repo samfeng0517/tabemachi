@@ -159,6 +159,7 @@ test("validateData should report an error when a url points to discord", () => {
     "https://media.discordapp.net/attachments/1/2/photo.jpg",
     "https://images-ext-1.discordapp.net/external/abc/photo.jpg",
     "https://discord.com./channels/1/2",
+    "https://discord.com../channels/1/2",
     "https://DISCORD.GG/abc",
     "https://discord.gg/abc",
   ];
