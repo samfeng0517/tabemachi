@@ -6,6 +6,8 @@
 // Usage: node scripts/check-scope.mjs [base-ref]  (default base-ref: origin/main)
 
 import { execFileSync } from "node:child_process";
+import { pathToFileURL } from "node:url";
+import { realpathSync } from "node:fs";
 
 const IN_SCOPE_PREFIX = "data/";
 
@@ -19,15 +21,20 @@ export function outOfScope(paths) {
     .filter((p) => p !== "data" && !p.startsWith(IN_SCOPE_PREFIX));
 }
 
-function git(args) {
-  return execFileSync("git", args, { encoding: "utf8" }).trim();
+function git(args, options) {
+  return execFileSync("git", args, { encoding: "utf8", ...options }).trim();
 }
 
-// Lists every changed path relative to `baseRef`: committed differences,
-// staged/unstaged working tree changes (all covered by `git diff <ref>`),
-// plus untracked new files.
+// Lists every changed path relative to the merge base of `baseRef` and HEAD
+// (not `baseRef` itself): committed differences since the two branches
+// diverged, staged/unstaged working tree changes (all covered by
+// `git diff <merge-base>`), plus untracked new files. Diffing against the
+// merge base (rather than the possibly-moving `baseRef` tip) avoids flagging
+// unrelated files that a concurrent, non-data push to `baseRef` may have
+// touched after this run's HEAD diverged from it.
 function listChangedPaths(baseRef) {
-  const diffOutput = git(["diff", "--name-only", baseRef]);
+  const mergeBase = git(["merge-base", baseRef, "HEAD"]);
+  const diffOutput = git(["diff", "--name-only", mergeBase]);
   const untrackedOutput = git(["ls-files", "--others", "--exclude-standard"]);
   const diffPaths = diffOutput ? diffOutput.split("\n") : [];
   const untrackedPaths = untrackedOutput ? untrackedOutput.split("\n") : [];
@@ -63,7 +70,23 @@ function main() {
   process.exitCode = 0;
 }
 
-const isMainModule = import.meta.url === `file://${process.argv[1]}`;
-if (isMainModule) {
+// Percent-encode-safe, symlink-safe comparison: `import.meta.url` percent-
+// encodes spaces/non-ASCII characters and reflects the resolved real path,
+// while a raw `process.argv[1]` does neither (e.g. on macOS, `os.tmpdir()`
+// paths live under `/var/...`, a symlink to `/private/var/...`). Resolve
+// `process.argv[1]` with `realpathSync` and convert with `pathToFileURL`
+// instead of a raw string template so both sides compare equal.
+function isMainModule() {
+  if (process.argv[1] == null) return false;
+  try {
+    return (
+      import.meta.url === pathToFileURL(realpathSync(process.argv[1])).href
+    );
+  } catch {
+    return false;
+  }
+}
+
+if (isMainModule()) {
   main();
 }

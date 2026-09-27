@@ -4,6 +4,7 @@
 
 ## 修改資料時的規則
 
+- 開始編輯前，先執行 `git pull --rebase`，確保本地是最新的 `main`（避免跟每週排程或其他 session 的變更衝突）。
 - 使用者要求修改餐廳 / 攻略資料時，**只修改 `data/restaurants.json`**（必要時可一併新增 / 調整 `images/` 底下的圖片檔案）。除非使用者明確要求改網站外觀或程式，不要動 `index.html`、`assets/`、`scripts/`、`ROUTINE.md` 等其他檔案。
 - 保持既有 schema：欄位定義見 `scripts/lib/schema.mjs`；不要新增 schema 未定義的欄位，也不要拿掉必要欄位。
 - 修改完成後，依序執行：
