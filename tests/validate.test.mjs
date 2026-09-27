@@ -128,6 +128,22 @@ test("validateData should report an error when meal is not an allowed value", ()
   assert.ok(errors.length > 0);
 });
 
+test("validateData should report an error when country is an empty string", () => {
+  const data = makeData({
+    restaurants: [makeRestaurant({ country: "" })],
+  });
+  const errors = validateData(data);
+  assert.ok(errors.length > 0);
+});
+
+test("validateData should report an error when price mixes currency symbols", () => {
+  const data = makeData({
+    restaurants: [makeRestaurant({ price: "$¥" })],
+  });
+  const errors = validateData(data);
+  assert.ok(errors.length > 0);
+});
+
 test("cleanUrl should strip igsh and utm params when present", () => {
   const result = cleanUrl(
     "https://example.com/post?igsh=abc123&utm_source=ig&utm_medium=share&id=42",

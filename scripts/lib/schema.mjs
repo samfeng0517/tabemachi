@@ -1,5 +1,5 @@
 // Shared schema constants and validation helpers for the 食候 (tabemachi) data file.
-// Used by both scripts/validate.mjs (CLI) and the frontend build.
+// Used by both scripts/validate.mjs (CLI) and the frontend.
 
 export const COLORS = ["clay", "indigo", "matcha", "ocean", "plum", "saffron"];
 
@@ -12,7 +12,8 @@ export const COUNTRIES = ["台灣", "日本", "越南"];
 
 const ID_PATTERN = /^[a-z0-9-]+$/;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
-const PRICE_PATTERN = /^(\$|¥){1,4}$/;
+// 1-4 dollar signs OR 1-3 yen signs; mixing currency symbols is not allowed.
+const PRICE_PATTERN = /^(\${1,4}|¥{1,3})$/;
 const MESSAGE_ID_PATTERN = /^\d{17,20}$/;
 const TRACKING_PARAM_PATTERN = /^utm_/i;
 const TRACKING_PARAM_NAMES = new Set(["fbclid", "igsh", "igshid"]);
@@ -61,6 +62,12 @@ function requireString(obj, field, label, errors) {
 function requireBoolean(obj, field, label, errors) {
   if (typeof obj[field] !== "boolean") {
     errors.push(`${label}: "${field}" must be a boolean`);
+  }
+}
+
+function requireNonEmptyString(obj, field, label, errors) {
+  if (typeof obj[field] !== "string" || obj[field] === "") {
+    errors.push(`${label}: "${field}" must be a non-empty string`);
   }
 }
 
@@ -159,9 +166,9 @@ function validateRestaurant(restaurant, index, errors, idCounts) {
   const label = `restaurant[${index}]${typeof restaurant.id === "string" ? ` (${restaurant.id})` : ""}`;
 
   validateId(restaurant.id, label, errors, idCounts);
-  requireString(restaurant, "name", label, errors);
-  requireString(restaurant, "country", label, errors);
-  requireString(restaurant, "area", label, errors);
+  requireNonEmptyString(restaurant, "name", label, errors);
+  requireNonEmptyString(restaurant, "country", label, errors);
+  requireNonEmptyString(restaurant, "area", label, errors);
   requireString(restaurant, "cuisine", label, errors);
   validatePrice(restaurant.price, label, errors);
   validateEnum(restaurant.meal, MEALS, "meal", label, errors);
@@ -191,8 +198,8 @@ function validateGuide(guide, index, errors, idCounts) {
   const label = `guide[${index}]${typeof guide.id === "string" ? ` (${guide.id})` : ""}`;
 
   validateId(guide.id, label, errors, idCounts);
-  requireString(guide, "title", label, errors);
-  requireString(guide, "area", label, errors);
+  requireNonEmptyString(guide, "title", label, errors);
+  requireNonEmptyString(guide, "area", label, errors);
   requireString(guide, "tag", label, errors);
   validateHttpsOrEmptyUrl(guide.source, "source", label, errors);
   requireString(guide, "note", label, errors);
