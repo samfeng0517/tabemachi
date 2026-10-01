@@ -2067,6 +2067,46 @@
       "image_credit_url": "https://fukuyoshi-asakusakuramae.owst.jp/",
       "color": "matcha",
       "discord_message_ids": ["1546737215361654914"]
+    },
+    {
+      "id": "center-beef-akihabara",
+      "name": "ステーキライスとカレーの店 センタービーフ 秋葉原店",
+      "country": "日本",
+      "area": "東京・秋葉原",
+      "cuisine": "牛排飯",
+      "price": "¥",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-08-16",
+      "location": "東京都千代田区神田佐久間町2-12 きりやビル1F",
+      "note": "秋葉原站昭和通口附近的牛排飯與咖哩專門店，牛排份量可選。貼文沒寫店名，店名出自留言者附的地圖連結，原作者未確認。",
+      "verified": true,
+      "source": "https://www.threads.com/@evangeline_.17_.21/post/DcFdjn-Ea32",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%A9%E3%82%A4%E3%82%B9%E3%81%A8%E3%82%AB%E3%83%AC%E3%83%BC%E3%81%AE%E5%BA%97%20%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%93%E3%83%BC%E3%83%95%20%E7%A7%8B%E8%91%89%E5%8E%9F%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E7%A5%9E%E7%94%B0%E4%BD%90%E4%B9%85%E9%96%93%E7%94%BA2-12%20%E3%81%8D%E3%82%8A%E3%82%84%E3%83%93%E3%83%AB1F",
+      "image_url": "",
+      "image_credit_url": "https://akiba-pc.watch.impress.co.jp/docs/news/news/1569607.html",
+      "color": "clay",
+      "discord_message_ids": ["1538508810430193747"]
+    },
+    {
+      "id": "kamo-to-negi-ueno-okachimachi",
+      "name": "らーめん 鴨to葱 上野御徒町本店",
+      "country": "日本",
+      "area": "東京・上野御徒町",
+      "cuisine": "鴨湯拉麵",
+      "price": "¥",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-08-16",
+      "location": "東京都台東区上野6-4-15",
+      "note": "御徒町的排隊名店，只用鴨與蔥熬湯。貼文沒寫店名，店名由留言討論推論而來；留言有人覺得不值得排一個多小時，評價不一。",
+      "verified": true,
+      "source": "https://www.threads.com/@evangeline_.17_.21/post/DcFdjn-Ea32",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%89%E3%83%BC%E3%82%81%E3%82%93%20%E9%B4%A8to%E8%91%B1%20%E4%B8%8A%E9%87%8E%E5%BE%A1%E5%BE%92%E7%94%BA%E6%9C%AC%E5%BA%97%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8F%B0%E6%9D%B1%E5%8C%BA%E4%B8%8A%E9%87%8E6-4-15",
+      "image_url": "",
+      "image_credit_url": "https://san-tatsu.jp/articles/243986/",
+      "color": "saffron",
+      "discord_message_ids": ["1538508810430193747"]
     }
   ],
   "guides": [
@@ -2087,15 +2127,6 @@
       "source": "https://www.walkerland.com.tw/subject/view/424649",
       "note": "商場開幕與品牌整理文，屬於多店資訊，不混進單一餐廳卡。",
       "discord_message_ids": ["1537790480668958800"]
-    },
-    {
-      "id": "tokyo-trip-multi-shop-review",
-      "title": "東京旅行多店回顧",
-      "area": "東京・多地",
-      "tag": "待拆分",
-      "source": "https://www.threads.com/@evangeline_.17_.21/post/DcFdjn-Ea32",
-      "note": "貼文是東京旅行的照片合輯，稱讚蛋包飯與牛排飯，但內文沒有店名。留言中有其他網友（非原作者）回覆牛排飯可能是秋葉原的 Center Beef，原作者未確認；蛋包飯等其他店仍無線索，需要看圖片才能判斷。",
-      "discord_message_ids": ["1538508810430193747"]
     },
     {
       "id": "ho-chi-minh-city-food-guide",
