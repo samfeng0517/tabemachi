@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 93,
+  "processed_message_count": 105,
   "restaurants": [
     {
       "id": "bogarts",
@@ -799,7 +799,7 @@
       "image_url": "https://pimg.1px.tw/eggface45/1580973168-2896528029.jpg",
       "image_credit_url": "https://eggie.tw/blog/posts/8228895244",
       "color": "matcha",
-      "discord_message_ids": ["1542373349622292581"]
+      "discord_message_ids": ["1542373349622292581", "1554521980810690663"]
     },
     {
       "id": "ginza-chikamitsu",
@@ -1441,6 +1441,127 @@
       "source": "https://www.threads.com/share/_yzo2xeQ4/",
       "note": "貼文是東京九天獨旅的美食照片合輯，文字沒有店名；作者在留言提到的池袋燒肉店是不想再去的，不算推薦。需要看圖才能辨識推薦的店。",
       "discord_message_ids": ["1553377087648170109"]
+    },
+    {
+      "id": "fukuoka-tenjin-late-night-guide",
+      "title": "福岡天神深夜美食三選",
+      "area": "福岡・天神",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/reel/DdyuIayBoC9/",
+      "note": "貼文整理天神一帶的三間深夜店：豚骨拉麵（麵屋我ガ 天神店）、烤雞皮串燒（みつます 天神店）與小型燒肉（溜）。多店攻略，尚未逐店查證分店與地址。",
+      "discord_message_ids": [
+        "1553954245126918296"
+      ]
+    },
+    {
+      "id": "okamo-club-nakameguro-lead",
+      "title": "魚の店 オカモ倶楽部（待確認）",
+      "area": "東京・中目黑",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAaUan0lsC/",
+      "note": "貼文提到中目黑站步行約兩分鐘的海鮮居酒屋，可能是目黑區上目黑的魚の店 オカモ倶楽部；只有單一貼文來源，尚未交叉確認店名與地址。",
+      "discord_message_ids": [
+        "1554151849987154111"
+      ]
+    },
+    {
+      "id": "musashi-hakata-gyumabushi-lead",
+      "title": "博多牛まぶし 武蔵（待確認）",
+      "area": "福岡・博多",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/reel/DcU8YFQh2nH/",
+      "note": "貼文疑似推薦博多車站東側的和牛牛まぶし店「武蔵」，只有單一貼文來源，尚未交叉確認店名與地址。",
+      "discord_message_ids": [
+        "1554433017710121015"
+      ]
+    },
+    {
+      "id": "kaisen-nagi-tojinmachi-lead",
+      "title": "海鮮食堂 凪（待確認）",
+      "area": "福岡・唐人町",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@_sayacamera/post/Dd3dDjZn08V",
+      "note": "貼文推薦唐人町附近的海鮮食堂 凪，午餐限定的蝦天丼是亮點；貼文未附地址，尚未交叉確認。",
+      "discord_message_ids": [
+        "1554477403810824272"
+      ]
+    },
+    {
+      "id": "nooice-hakata-lead",
+      "title": "NOOICE hakata（待確認）",
+      "area": "福岡・博多",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@christina.fan69/post/Dd3inLvlE7d",
+      "note": "貼文提到福岡最後一天、適合出發前悠閒用餐的店 NOOICE hakata；未附地址，尚未交叉確認。",
+      "discord_message_ids": [
+        "1554691135346049054"
+      ]
+    },
+    {
+      "id": "daijin-kushiya-fukuoka-lead",
+      "title": "大臣串房（待確認）",
+      "area": "福岡",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/@jiinnnghsu/post/Dd5WpiBkkA4",
+      "note": "貼文推薦福岡以雞皮串燒聞名的大臣串房，沒有寫分店或地址，尚未交叉確認。",
+      "discord_message_ids": [
+        "1554714118441664543"
+      ]
+    },
+    {
+      "id": "kamonosuke-asakusabashi-lead",
+      "title": "かものすけ（待確認）",
+      "area": "東京・淺草橋",
+      "tag": "需要線索",
+      "source": "https://www.threads.com/share/BAXD-9GpTh/",
+      "note": "貼文疑似推薦淺草橋站步行約兩分鐘的鴨料理店かものすけ，只有單一貼文來源，尚未交叉確認店名與地址。",
+      "discord_message_ids": [
+        "1554853599002103808"
+      ]
+    },
+    {
+      "id": "one-karubi-tenjin-imaizumi-lead",
+      "title": "燒肉 One Karubi Premium 天神今泉（待確認）",
+      "area": "福岡・天神今泉",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/reel/DdVvOWUTEjk/",
+      "note": "貼文疑似推薦天神今泉的黑毛和牛吃到飽燒肉 One Karubi Premium；只有單一貼文來源，尚未交叉確認。",
+      "discord_message_ids": [
+        "1555156066965397554"
+      ]
+    },
+    {
+      "id": "fukuoka-ten-day-food-guide",
+      "title": "福岡十日美食攻略（多店）",
+      "area": "福岡・多地",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/p/DdgDvSCFZBH/",
+      "note": "食記帳號整理十天福岡行的三十多間店，含もつ鍋、燒肉、居酒屋與甜點等；多店攻略，不拆成單一餐廳卡。",
+      "discord_message_ids": [
+        "1555156321219780629"
+      ]
+    },
+    {
+      "id": "mercer-brunch-taipei-lead",
+      "title": "MERCER BRUNCH 台北（待確認）",
+      "area": "台北・松山",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/reel/DdoXlWApBSM/",
+      "note": "貼文疑似推薦松山區民生東路四段的 MERCER BRUNCH 台北店，招牌是楓糖奶油法式吐司；只有單一貼文來源，尚未交叉確認。",
+      "discord_message_ids": [
+        "1555157166090879097"
+      ]
+    },
+    {
+      "id": "shuwuhe-daan-lead",
+      "title": "涮武鶴x炙武鶴 大安店（待確認）",
+      "area": "台北・大安",
+      "tag": "需要線索",
+      "source": "https://www.instagram.com/reel/Dd0zeSLPMi6/",
+      "note": "貼文疑似推薦大安區忠孝東路四段巷內的和牛火鍋吃到飽，由肉品商經營；只有單一貼文來源，尚未交叉確認。",
+      "discord_message_ids": [
+        "1555158597648916531"
+      ]
     }
   ]
 }
