@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 105,
+  "processed_message_count": 108,
   "restaurants": [
     {
       "id": "bogarts",
@@ -459,14 +459,7 @@
       "image_url": "images/kohinoor.webp",
       "image_credit_url": "https://www.threads.com/@boringstupidwalk/post/DctAOyIAXWZ",
       "color": "saffron",
-      "discord_message_ids": [
-        "1544259067050983445",
-        "1544259086105976883",
-        "1544259113368813568",
-        "1544259149062344714",
-        "1544259198617915412",
-        "1544259250111512578"
-      ]
+      "discord_message_ids": ["1544259067050983445", "1544259086105976883", "1544259113368813568", "1544259149062344714", "1544259198617915412", "1544259250111512578"]
     },
     {
       "id": "burning-burger",
@@ -2107,6 +2100,66 @@
       "image_credit_url": "https://san-tatsu.jp/articles/243986/",
       "color": "saffron",
       "discord_message_ids": ["1538508810430193747"]
+    },
+    {
+      "id": "uzu-sushi-mojiko",
+      "name": "門司港レトロ 渦寿司 -UZU-",
+      "country": "日本",
+      "area": "北九州・門司港",
+      "cuisine": "迴轉壽司",
+      "price": "¥",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-10-07",
+      "location": "福岡県北九州市門司区西海岸1-4-44 AMAZING SPOT MOJIKO 2F",
+      "note": "2026 年 7 月開幕、設在門司港星野集團複合設施二樓的壽司店，職人現握並以配膳軌道送餐，三貫盛約 488 日圓起。",
+      "verified": true,
+      "source": "https://www.threads.com/@fattsai/post/DeL03GJiau6",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%96%80%E5%8F%B8%E6%B8%AF%E3%83%AC%E3%83%88%E3%83%AD%20%E6%B8%A6%E5%AF%BF%E5%8F%B8%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E5%8C%97%E4%B9%9D%E5%B7%9E%E5%B8%82%E9%96%80%E5%8F%B8%E5%8C%BA%E8%A5%BF%E6%B5%B7%E5%B2%B81-4-44%20AMAZING%20SPOT%20MOJIKO%202F",
+      "image_url": "",
+      "image_credit_url": "https://prtimes.jp/main/html/rd/p/000000007.000119128.html",
+      "color": "ocean",
+      "discord_message_ids": ["1557334122484207696"]
+    },
+    {
+      "id": "renxiang-sanhe-night-market",
+      "name": "仁湘（三和夜市）",
+      "country": "台灣",
+      "area": "新北・三重",
+      "cuisine": "蒜蓉蝦蒸粄條",
+      "price": "$",
+      "meal": "晚餐",
+      "author": "Kabifufu",
+      "date": "2026-10-07",
+      "location": "新北市三重區中央北路67-1號",
+      "note": "三和夜市中段的小店，主打鮮蝦蒜蓉蒸粄條，約下午 5 點開門、週一週二公休，備料賣完就收。",
+      "verified": true,
+      "source": "https://www.instagram.com/reel/DeLcfGVBLm9/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E4%BB%81%E6%B9%98%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%AD%E5%A4%AE%E5%8C%97%E8%B7%AF67-1%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "https://supertaste.tvbs.com.tw/food/360700",
+      "color": "matcha",
+      "discord_message_ids": ["1557348060013527050"]
+    },
+    {
+      "id": "gion-zenin-sukiyaki-daan",
+      "name": "祇園・禪院壽喜燒專門店",
+      "country": "台灣",
+      "area": "台北・大安",
+      "cuisine": "壽喜燒",
+      "price": "$$$$",
+      "meal": "晚餐",
+      "author": "Sam517",
+      "date": "2026-10-11",
+      "location": "台北市大安區樂利路11巷22號",
+      "note": "2026 年新開幕、日方投資監修的全包廂預約制關西風壽喜燒，為台北壽喜燒名店橋山的姊妹店，每人約 2,000 至 5,000 元。",
+      "verified": true,
+      "source": "https://www.instagram.com/reel/DeERRJkSHxk/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92%E7%A6%AA%E9%99%A2%E5%A3%BD%E5%96%9C%E7%87%92%E5%B0%88%E9%96%80%E5%BA%97%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%A8%82%E5%88%A9%E8%B7%AF11%E5%B7%B722%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "https://supertaste.tvbs.com.tw/food/359305",
+      "color": "plum",
+      "discord_message_ids": ["1558733616123609109"]
     }
   ],
   "guides": [
