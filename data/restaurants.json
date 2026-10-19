@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 108,
+  "processed_message_count": 109,
   "restaurants": [
     {
       "id": "bogarts",
@@ -2160,6 +2160,28 @@
       "image_credit_url": "https://supertaste.tvbs.com.tw/food/359305",
       "color": "plum",
       "discord_message_ids": ["1558733616123609109"]
+    },
+    {
+      "id": "xinxi-sushi-wanhua",
+      "name": "忻鮨壽司",
+      "country": "台灣",
+      "area": "台北・萬華",
+      "cuisine": "壽司割烹",
+      "price": "$$$",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-12",
+      "location": "台北市萬華區桂林路109號",
+      "note": "萬華桂林路上的板前壽司割烹，主廚為資深日料職人，主打高 CP 值無菜單握壽司；報導中的價格為早期資訊，可能已調整。",
+      "verified": true,
+      "source": "https://maps.app.goo.gl/qPAeFrPkEHAvgZXr5?g_st=ic",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%BF%BB%E9%AE%A8%E5%A3%BD%E5%8F%B8%20%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%A1%82%E6%9E%97%E8%B7%AF109%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "https://www.chinatimes.com/realtimenews/20201231002053-260508",
+      "color": "ocean",
+      "discord_message_ids": [
+        "1559229085710942228"
+      ]
     }
   ],
   "guides": [
