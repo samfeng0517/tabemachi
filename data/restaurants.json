@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 109,
+  "processed_message_count": 110,
   "restaurants": [
     {
       "id": "bogarts",
@@ -2182,6 +2182,26 @@
       "discord_message_ids": [
         "1559229085710942228"
       ]
+    },
+    {
+      "id": "katchar-batchar-minamiotsuka",
+      "name": "Katchar Batchar",
+      "country": "日本",
+      "area": "東京・南大塚",
+      "cuisine": "印度料理",
+      "price": "¥¥",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-24",
+      "location": "東京都豊島区南大塚3-2-10 2F",
+      "note": "南大塚的印度料理店，入選米其林必比登推介，奶油雞咖哩與起司庫契亞是人氣菜色。",
+      "verified": true,
+      "source": "https://maps.app.goo.gl/BCBJGW1z1yKabtGM9",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Katchar%20Batchar%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E5%8D%97%E5%A4%A7%E5%A1%9A3-2-10%202F",
+      "image_url": "",
+      "image_credit_url": "https://guide.michelin.com/jp/ja/tokyo-region/tokyo/restaurant/katchar-batchar",
+      "color": "saffron",
+      "discord_message_ids": ["1563456418470699061"]
     }
   ],
   "guides": [
