@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 110,
+  "processed_message_count": 112,
   "restaurants": [
     {
       "id": "bogarts",
@@ -2179,9 +2179,7 @@
       "image_url": "",
       "image_credit_url": "https://www.chinatimes.com/realtimenews/20201231002053-260508",
       "color": "ocean",
-      "discord_message_ids": [
-        "1559229085710942228"
-      ]
+      "discord_message_ids": ["1559229085710942228"]
     },
     {
       "id": "katchar-batchar-minamiotsuka",
@@ -2202,6 +2200,46 @@
       "image_credit_url": "https://guide.michelin.com/jp/ja/tokyo-region/tokyo/restaurant/katchar-batchar",
       "color": "saffron",
       "discord_message_ids": ["1563456418470699061"]
+    },
+    {
+      "id": "pizza-3-cubed-xinyi",
+      "name": "披薩3次方 Pizza3",
+      "country": "台灣",
+      "area": "台北・信義",
+      "cuisine": "披薩",
+      "price": "$$",
+      "meal": "晚餐",
+      "author": "歹呷ㄟ蟹寶",
+      "date": "2026-10-27",
+      "location": "台北市信義區林口街16號",
+      "note": "主打雙窯爐現烤的薄皮披薩，餅皮薄、起司牽絲，旅遊媒體提到可以預先訂位；營業時間為傍晚到晚間。",
+      "verified": true,
+      "source": "https://share.google/VAWASBoW85WH1j5dZ",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%8A%AB%E8%96%A93%E6%AC%A1%E6%96%B9%20%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E6%9E%97%E5%8F%A3%E8%A1%9716%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "https://travel.yam.com/article/133170",
+      "color": "saffron",
+      "discord_message_ids": ["1564499143580192809"]
+    },
+    {
+      "id": "benjamin-butter-steak-frites-xinyi",
+      "name": "Benjamin Butter Steak & Frites",
+      "country": "台灣",
+      "area": "台北・信義",
+      "cuisine": "法式牛排",
+      "price": "$$$",
+      "meal": "晚餐",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-28",
+      "location": "台北市信義區基隆路一段147巷5弄13號",
+      "note": "近市政府站的平價法式牛排館，套餐含麵包、沙拉、小漢堡、奶油醬牛排佐薯條與甜點車，主餐可續一次；熱門時段建議提早訂位，價格以現場為準。",
+      "verified": true,
+      "source": "https://www.instagram.com/reel/De_xC0Uzabt/?obrf=bjdyYTIwM2w2dTg4",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Benjamin%20Butter%20Steak%20%26%20Frites%20%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%9F%BA%E9%9A%86%E8%B7%AF%E4%B8%80%E6%AE%B5147%E5%B7%B75%E5%BC%8413%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "https://www.threads.com/@jessie.c_215/post/DbvOJaLgaqh/",
+      "color": "clay",
+      "discord_message_ids": ["1564692451841671299"]
     }
   ],
   "guides": [
