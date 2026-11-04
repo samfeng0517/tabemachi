@@ -285,3 +285,23 @@ test("should pass the data checks when a legacy restaurant is removed", () => {
   data.restaurants.shift();
   assert.deepEqual(validateData(data, { fileExists: repoFileExists }), []);
 });
+
+test("validateData should accept an optional boolean visited field", () => {
+  const data = {
+    processed_message_count: 0,
+    restaurants: [makeRestaurant({ visited: true })],
+    guides: [],
+  };
+  assert.deepEqual(validateData(data), []);
+});
+
+test("validateData should reject a non-boolean visited field", () => {
+  const data = {
+    processed_message_count: 0,
+    restaurants: [makeRestaurant({ visited: "yes" })],
+    guides: [],
+  };
+  const errors = validateData(data);
+  assert.equal(errors.length, 1);
+  assert.match(errors[0], /"visited" must be a boolean/);
+});

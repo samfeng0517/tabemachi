@@ -11,6 +11,7 @@ import {
   formatFullDate,
   formatMonthDay,
   isPending,
+  isVisited,
   latestDate,
   parseFavorites,
   safeHref,
@@ -42,15 +43,19 @@ const els = {
   empty: $("#empty-state"),
   emptyClear: $("#empty-clear"),
   guides: $("#guide-list"),
+  visitedSection: $("#visited"),
+  visitedList: $("#visited-list"),
+  visitedCount: $("#visited-count"),
   lastUpdated: $("#last-updated"),
   viewButtons: document.querySelectorAll("[data-view]"),
   sheetBackground: document.querySelectorAll(
-    ".skip-link, .masthead, .toolbar, #results, .guides, .curation, .site-footer",
+    ".skip-link, .masthead, .toolbar, #results, .visited, .guides, .curation, .site-footer",
   ),
 };
 
 const state = {
   restaurants: [],
+  visited: [],
   filters: emptyFilters(),
   sort: "newest",
   cards: new Map(),
@@ -138,8 +143,11 @@ function buildMedia(restaurant) {
     media.classList.add("is-fallback");
   }
 
-  if (isPending(restaurant))
+  if (isVisited(restaurant)) {
+    media.append(el("span", "badge-visited", "吃過了"));
+  } else if (isPending(restaurant)) {
     media.append(el("span", "badge-pending", "待確認"));
+  }
   media.append(el("span", "price-tag", restaurant.price));
   return media;
 }
@@ -392,6 +400,15 @@ function render() {
   renderList();
 }
 
+function renderVisited() {
+  const visited = sortRestaurants(state.visited, "newest");
+  els.visitedSection.hidden = visited.length === 0;
+  els.visitedCount.textContent = `${visited.length} 間`;
+  els.visitedList.replaceChildren(
+    ...visited.map((restaurant) => state.cards.get(restaurant.id).item),
+  );
+}
+
 function renderStats(stats) {
   for (const [key, value] of Object.entries(stats)) {
     const node = document.querySelector(`[data-stat="${key}"]`);
@@ -477,19 +494,21 @@ async function init() {
     return;
   }
 
-  state.restaurants = data.restaurants;
-  for (const restaurant of state.restaurants) {
+  state.restaurants = data.restaurants.filter((item) => !isVisited(item));
+  state.visited = data.restaurants.filter(isVisited);
+  for (const restaurant of data.restaurants) {
     state.cards.set(restaurant.id, buildCard(restaurant));
     syncFavoriteButton(restaurant.id);
   }
 
   renderStats(computeStats(data));
-  const updated = latestDate(state.restaurants);
+  const updated = latestDate(data.restaurants);
   if (updated) {
     els.lastUpdated.textContent = formatFullDate(updated);
     els.lastUpdated.dateTime = updated;
   }
   renderGuides(Array.isArray(data.guides) ? data.guides : []);
+  renderVisited();
   render();
 }
 

@@ -228,6 +228,10 @@ function validateRestaurant(restaurant, index, errors, idCounts, fileExists) {
   requireString(restaurant, "location", label, errors);
   requireString(restaurant, "note", label, errors);
   requireBoolean(restaurant, "verified", label, errors);
+  // Optional: true moves the card into the site's 吃過的 section.
+  if ("visited" in restaurant) {
+    requireBoolean(restaurant, "visited", label, errors);
+  }
   validateHttpsUrl(restaurant.source, "source", label, errors);
   validateHttpsUrl(restaurant.map_url, "map_url", label, errors);
   validateImageUrl(

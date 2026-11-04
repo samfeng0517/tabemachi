@@ -12,6 +12,7 @@ import {
   safeHref,
   formatMonthDay,
   isPending,
+  isVisited,
   parseFavorites,
 } from "../assets/logic.js";
 
@@ -275,4 +276,11 @@ test("computeStats should skip branch-pending areas when counting cities", () =>
 test("logic constants should equal the schema constants when compared", () => {
   assert.deepEqual(MEAL_ORDER, MEALS);
   assert.deepEqual(COUNTRY_ORDER, COUNTRIES);
+});
+
+test("isVisited should be true only when visited is exactly true", () => {
+  assert.equal(isVisited(r({ visited: true })), true);
+  assert.equal(isVisited(r({ visited: false })), false);
+  assert.equal(isVisited(r()), false);
+  assert.equal(isVisited(r({ visited: "true" })), false);
 });

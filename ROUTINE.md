@@ -130,6 +130,7 @@ git fetch origin main && git checkout -B main origin/main
 | `image_credit_url`    | 圖片來源連結，`https://` 或空字串                                                                                                                                                                                                                                                                  |
 | `color`               | 從 `clay` / `indigo` / `matcha` / `ocean` / `plum` / `saffron` 中挑一個（新卡片自行指定一個，讓圖片失效時有色塊可顯示）                                                                                                                                                                            |
 | `discord_message_ids` | 字串陣列，格式 `^\d{17,20}$`，此筆內不可重複                                                                                                                                                                                                                                                       |
+| `visited`             | 選填布林值，`true` 代表大家已經吃過（網站會把它放進「吃過的」分區）。**routine 新增卡片時不要寫這個欄位；併入既有卡片時保留原值，不要新增、修改或移除** |
 
 ### 2.2 Guide（攻略 / 待確認卡）
 

@@ -799,7 +799,8 @@
       "image_url": "https://pimg.1px.tw/eggface45/1580973168-2896528029.jpg",
       "image_credit_url": "https://eggie.tw/blog/posts/8228895244",
       "color": "matcha",
-      "discord_message_ids": ["1542373349622292581", "1554521980810690663"]
+      "discord_message_ids": ["1542373349622292581", "1554521980810690663"],
+      "visited": true
     },
     {
       "id": "ginza-chikamitsu",

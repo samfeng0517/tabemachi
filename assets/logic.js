@@ -260,6 +260,11 @@ export function isPending(restaurant) {
   );
 }
 
+// Restaurants the group has already eaten at live in their own section.
+export function isVisited(restaurant) {
+  return restaurant?.visited === true;
+}
+
 export function parseFavorites(raw) {
   try {
     const parsed = JSON.parse(raw);
