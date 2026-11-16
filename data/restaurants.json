@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 113,
+  "processed_message_count": 123,
   "restaurants": [
     {
       "id": "bogarts",
@@ -521,14 +521,16 @@
       "author": "曾根俊太郎",
       "date": "2026-09-08",
       "location": "Hotel Nikko Saigon, 235 Nguyen Van Cu Street, Cau Ong Lanh Ward, Ho Chi Minh City",
-      "note": "西貢日航酒店的海鮮自助餐；推薦現烤岩龍蝦、生蠔與和牛，價位與供應時段請以官網為準。",
+      "note": "西貢日航酒店的海鮮自助餐；推薦現烤岩龍蝦、生蠔與和牛，價位與供應時段請以官網為準。訂位時告知慶生，餐廳會準備蛋糕並有樂手桌邊演奏。",
       "verified": true,
       "source": "https://www.threads.com/share/BBV-ujYYGm/",
       "map_url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Nikko%20Saigon%2C%20235%20Nguyen%20Van%20Cu%20Street%2C%20Cau%20Ong%20Lanh%20Ward%2C%20Ho%20Chi%20Minh%20City",
       "image_url": "images/la-brasserie.webp",
       "image_credit_url": "https://www.threads.com/@mayawangsite/post/Dc_FM7nkyNT",
       "color": "matcha",
-      "discord_message_ids": []
+      "discord_message_ids": [
+        "1571574314296283267"
+      ]
     },
     {
       "id": "sushi-ichida",
@@ -2431,6 +2433,204 @@
       "color": "saffron",
       "discord_message_ids": [
         "1566775711702851665"
+      ]
+    },
+    {
+      "id": "nanfangao-wuming-xiabing",
+      "name": "南方澳無名蝦餅",
+      "country": "台灣",
+      "area": "宜蘭・南方澳",
+      "cuisine": "炸物小吃",
+      "price": "$",
+      "meal": "午餐",
+      "author": "Kabifufu",
+      "date": "2026-10-09",
+      "location": "宜蘭縣蘇澳鎮南寧路62號對面",
+      "note": "漁港邊只賣蝦餅、蚵嗲、蘿蔔糕、春捲四樣的現炸小攤，午後開賣、賣完就收；店名由照片裡的攤位招牌與品項價目推論。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E6%96%B9%E6%BE%B3%E7%84%A1%E5%90%8D%E8%9D%A6%E9%A4%85%20%E5%AE%9C%E8%98%AD%E7%B8%A3%E8%98%87%E6%BE%B3%E9%8E%AE%E5%8D%97%E5%AF%A7%E8%B7%AF62%E8%99%9F",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E6%96%B9%E6%BE%B3%E7%84%A1%E5%90%8D%E8%9D%A6%E9%A4%85%20%E5%AE%9C%E8%98%AD%E7%B8%A3%E8%98%87%E6%BE%B3%E9%8E%AE%E5%8D%97%E5%AF%A7%E8%B7%AF62%E8%99%9F",
+      "color": "saffron",
+      "discord_message_ids": [
+        "1557989897233637436"
+      ]
+    },
+    {
+      "id": "sushi-bus-tokyo",
+      "name": "SUSHI BUS 迴轉壽司觀光巴士",
+      "country": "日本",
+      "area": "東京・丸之內",
+      "cuisine": "壽司",
+      "price": "¥¥¥",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-13",
+      "location": "鍛冶橋駐車場（東京車站八重洲側）",
+      "note": "2026 年 10 月上路的雙層觀光巴士，車上設迴轉壽司輸送帶、約 70 分鐘壽司吃到飽並沿途看東京地標，有白天與夜間班次，需事先預約。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.instagram.com/reel/DeZDi9QhygA/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%8D%9B%E5%86%B6%E6%A9%8B%E9%A7%90%E8%BB%8A%E5%A0%B4%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA",
+      "color": "ocean",
+      "discord_message_ids": [
+        "1559359369366470797"
+      ]
+    },
+    {
+      "id": "robata-no-ito-okashi-ropponmatsu",
+      "name": "炉端ノいとおかし",
+      "country": "日本",
+      "area": "福岡・六本松",
+      "cuisine": "爐端燒・海鮮丼",
+      "price": "¥¥",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-10-13",
+      "location": "福岡県福岡市中央区六本松2-3-13",
+      "note": "六本松的吧台爐端燒，早上供應現烤鮭魚、鰻魚定食並可加點大量現刨明太子的飯，晚上轉居酒屋；完全預約制，建議提早一週訂位。店名出自貼文作者留言。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.threads.com/@stellatung_/post/DebRYu7E8PP?xmt=AQG0M9fLGZVNmosnAeW0GKpXiwzGyrZFc6z6xOvv8sNuGoNICl2KICirrOuwpF2qKWL2JiER&slof=1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E7%82%89%E7%AB%AF%E3%83%8E%E3%81%84%E3%81%A8%E3%81%8A%E3%81%8B%E3%81%97%20%E7%A6%8F%E5%B2%A1%E7%9C%8C%E7%A6%8F%E5%B2%A1%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%85%AD%E6%9C%AC%E6%9D%BE2-3-13",
+      "color": "clay",
+      "discord_message_ids": [
+        "1559498540449796206"
+      ]
+    },
+    {
+      "id": "compas-pasta-house",
+      "name": "康帕斯義麵屋 Compas Pasta House",
+      "country": "台灣",
+      "area": "台北・松山",
+      "cuisine": "手工義大利麵",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-10-15",
+      "location": "台北市松山區八德路三段106巷69號",
+      "note": "市民大道旁的玻璃屋手工生麵店，自製四種麵體，松露野菇火炬麵是招牌，座位少建議訂位；店名由貼文圖片的地點、手工麵與火炬麵等線索推論。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.threads.com/@lgig0926/post/DeeJuMCmFVs?xmt=AQG0UBOA6mWfrispXAHxmE0-Fju4reo2qnCrAowqG_scDjWYdAG5F2z3K6MhNDQqNJfTztBo&slof=1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%BA%B7%E5%B8%95%E6%96%AF%E7%BE%A9%E9%BA%B5%E5%B1%8B%20%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%85%AB%E5%BE%B7%E8%B7%AF%E4%B8%89%E6%AE%B5106%E5%B7%B769%E8%99%9F",
+      "color": "matcha",
+      "discord_message_ids": [
+        "1560147431260164096"
+      ]
+    },
+    {
+      "id": "sushi-edo-fuji-yushima",
+      "name": "鮨 江戸富士",
+      "country": "日本",
+      "area": "東京・湯島",
+      "cuisine": "海鮮丼・壽司",
+      "price": "¥¥",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-15",
+      "location": "東京都文京区湯島2-7-7",
+      "note": "上野、御茶之水之間的壽司店，午餐海鮮丼料多新鮮、堆成小山，海膽鮭魚卵款較貴；不收訂位，建議開門前提早排隊。店名出自貼文留言。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.threads.com/share/BAZ_syvwTy/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%AE%A8%20%E6%B1%9F%E6%88%B8%E5%AF%8C%E5%A3%AB%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%87%E4%BA%AC%E5%8C%BA%E6%B9%AF%E5%B3%B62-7-7",
+      "color": "indigo",
+      "discord_message_ids": [
+        "1560214220946284608"
+      ]
+    },
+    {
+      "id": "wagyu-formula-nanjing-fuxing",
+      "name": "和牛方程式 WAGYU FORMULA",
+      "country": "台灣",
+      "area": "台北・松山",
+      "cuisine": "和牛料理",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-10-28",
+      "location": "台北市松山區慶城街1號2樓",
+      "note": "南京復興站旁主打近江牛的店，一店包辦和牛拉麵、丼飯、燒肉與壽喜燒鍋物，平日午餐價位相對親民。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.instagram.com/reel/De3_qi2s3-s/",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%92%8C%E7%89%9B%E6%96%B9%E7%A8%8B%E5%BC%8F%20%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E6%85%B6%E5%9F%8E%E8%A1%971%E8%99%9F2%E6%A8%93",
+      "color": "plum",
+      "discord_message_ids": [
+        "1564694636654502041"
+      ]
+    },
+    {
+      "id": "xiagangye-lamb-tianxiang",
+      "name": "下港吔羊肉專賣店",
+      "country": "台灣",
+      "area": "台北・中山",
+      "cuisine": "羊肉爐",
+      "price": "$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-03",
+      "location": "台北市中山區天祥路18號",
+      "note": "民權西路站附近經營約 30 年的全羊料理老店，羊肉爐有紅燒與當歸湯底，羊肉片湯和燙地瓜葉也受推薦，尖峰時段建議先訂位。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.threads.com/@ma_ekko/post/DfP3EAAH8UC?xmt=AQG0Kaio9gvghXhb7joyd3FL22Fkc_IglCVkAKkT0upVVWW_y5_36czo8IUaeY-9SeUbQ-kp&slof=1",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%8B%E6%B8%AF%E5%90%94%E7%BE%8A%E8%82%89%E5%B0%88%E8%B3%A3%E5%BA%97%20%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E5%A4%A9%E7%A5%A5%E8%B7%AF18%E8%99%9F",
+      "color": "clay",
+      "discord_message_ids": [
+        "1566996234592325733"
+      ]
+    },
+    {
+      "id": "yosuke-kitchen-changchun",
+      "name": "洋介小料理",
+      "country": "台灣",
+      "area": "台北・松山",
+      "cuisine": "日式居酒屋",
+      "price": "$$$",
+      "meal": "晚餐",
+      "author": "Kabifufu",
+      "date": "2026-11-03",
+      "location": "台北市松山區長春路498號",
+      "note": "南京復興附近以吧台為主的小料理店，菜色寫在黑板上，厚切豬排三明治與燉牛筋牛肚是招牌；營業到深夜、日一公休，座位少需先訂位並有低消。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.instagram.com/reel/DfRgfTqNwdF/?xtok=NTc4MTIwNjQ2YQ%3D%3D",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%B4%8B%E4%BB%8B%E5%B0%8F%E6%96%99%E7%90%86%20%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E9%95%B7%E6%98%A5%E8%B7%AF498%E8%99%9F",
+      "color": "indigo",
+      "discord_message_ids": [
+        "1567150880925687888"
+      ]
+    },
+    {
+      "id": "kfc-taiwan-hokkaido-milk-egg-tart",
+      "name": "肯德基 北海道特濃牛奶蛋撻",
+      "country": "台灣",
+      "area": "台灣・分店待選",
+      "cuisine": "速食甜點",
+      "price": "$",
+      "meal": "全時段",
+      "author": "Obecne🐟🐟🦀🦀",
+      "date": "2026-11-08",
+      "location": "肯德基 台灣",
+      "note": "台灣肯德基冬季限定蛋撻，北海道牛乳內餡加牛奶慕斯，2026-11-10 起販售至 2027-01-11，全台門市皆可買，分店不限。",
+      "verified": true,
+      "image_url": "",
+      "image_credit_url": "",
+      "source": "https://www.threads.com/share/BAXQaf4Zao",
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E8%82%AF%E5%BE%B7%E5%9F%BA%20%E5%8F%B0%E5%8C%97",
+      "color": "saffron",
+      "discord_message_ids": [
+        "1568901744019251281"
       ]
     }
   ],
