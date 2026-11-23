@@ -1,5 +1,5 @@
 {
-  "processed_message_count": 123,
+  "processed_message_count": 129,
   "restaurants": [
     {
       "id": "bogarts",
@@ -1837,7 +1837,8 @@
       "image_credit_url": "https://guide.michelin.com/pl/en/ho-chi-minh/ho-chi-minh_2978179/restaurant/pho-viet-nam-district-1",
       "color": "clay",
       "discord_message_ids": [
-        "1552878175607062548"
+        "1552878175607062548",
+        "1573670947179733192"
       ]
     },
     {
@@ -2631,6 +2632,161 @@
       "color": "saffron",
       "discord_message_ids": [
         "1568901744019251281"
+      ]
+    },
+    {
+      "id": "xiao-chen-beef-noodle-yongchun",
+      "name": "小陳紅燒牛肉麵",
+      "country": "台灣",
+      "area": "台北・信義（永春）",
+      "cuisine": "牛肉麵",
+      "price": "$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-21",
+      "location": "台北市信義區虎林街135號",
+      "note": "永春站步行約五分鐘的紅燒牛肉麵老店，牛肉塊大又燉得軟爛，另有清湯口味；只做午晚兩段，週日、週一公休，用餐時段常要排隊。",
+      "source": "https://www.threads.com/@olivia_food_blog/post/Df9wAOjo5O-",
+      "color": "clay",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%B0%8F%E9%99%B3%E7%89%9B%E8%82%89%E9%BA%B5%20%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E8%99%8E%E6%9E%97%E8%A1%97135%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1573655771005194311"
+      ]
+    },
+    {
+      "id": "yanmufu-tonkatsu-sanchong",
+      "name": "煙幕府職人豬排",
+      "country": "台灣",
+      "area": "新北・三重",
+      "cuisine": "日式炸豬排",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-21",
+      "location": "新北市三重區仁愛街16號1樓",
+      "note": "三重國小站附近的熟成炸豬排專賣店，與對面炊煙拉麵同老闆，里肌薄衣酥脆、滑蛋與米飯也受好評；午晚兩段營業、週四公休，只能現場候位。",
+      "source": "https://www.instagram.com/p/DXlzZd3E8SF/",
+      "color": "saffron",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E7%85%99%E5%B9%95%E5%BA%9C%E8%81%B7%E4%BA%BA%E8%B1%AC%E6%8E%92%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%BB%81%E6%84%9B%E8%A1%9716%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1573661503259676727",
+        "1573661831023820954"
+      ]
+    },
+    {
+      "id": "sanchong-huokao-chicken-cutlet",
+      "name": "三重火烤香雞排",
+      "country": "台灣",
+      "area": "新北・三重",
+      "cuisine": "雞排小吃",
+      "price": "$",
+      "meal": "晚餐",
+      "author": "Kabifufu",
+      "date": "2026-11-16",
+      "location": "新北市三重區三民街310號",
+      "note": "三民街上經營近三十年的街邊小攤，雞排先炸再上炭火刷醬烤；每週只開週二、三、六下午約 15:30–18:00，常提早賣完。店名由貼文作者同日的部落格食記確認。",
+      "source": "https://www.threads.com/@lupandaaa/post/Dfw1H4vk6uF",
+      "color": "ocean",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=%E4%B8%89%E9%87%8D%E7%81%AB%E7%83%A4%E9%A6%99%E9%9B%9E%E6%8E%92%20%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E4%B8%89%E6%B0%91%E8%A1%97310%E8%99%9F",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1571853073528258610"
+      ]
+    },
+    {
+      "id": "bep-cuon-saigon-vo-van-tan",
+      "name": "Bếp Cuốn Sài Gòn",
+      "country": "越南",
+      "area": "越南・胡志明市",
+      "cuisine": "越南菜",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-21",
+      "location": "76 Võ Văn Tần, Phường Võ Thị Sáu, Quận 3, Hồ Chí Minh",
+      "note": "第三郡的越式家常料理餐廳，推薦奶油蝦與炒空心菜；出自一篇胡志明市多店食記。",
+      "source": "https://www.threads.com/@8crc788/post/Df9vYWck75b",
+      "color": "matcha",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=B%E1%BA%BFp%20Cu%E1%BB%91n%20S%C3%A0i%20G%C3%B2n%2076%20V%C3%B5%20V%C4%83n%20T%E1%BA%A7n%20H%E1%BB%93%20Ch%C3%AD%20Minh",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1573670947179733192"
+      ]
+    },
+    {
+      "id": "pizza-4ps-hcmc",
+      "name": "Pizza 4P's",
+      "country": "越南",
+      "area": "胡志明・分店待選",
+      "cuisine": "日式義式披薩",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-21",
+      "location": "Pizza 4P's 胡志明市",
+      "note": "胡志明市有多家分店的日資披薩連鎖，食記特別推螃蟹義大利麵；原貼文未說明是哪一家分店。",
+      "source": "https://www.threads.com/@8crc788/post/Df9vYWck75b",
+      "color": "plum",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Pizza%204P%27s%20Ho%20Chi%20Minh%20City",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1573670947179733192"
+      ]
+    },
+    {
+      "id": "induslism-hub-hoang-sa",
+      "name": "Induslism Hub Coffee & Wine",
+      "country": "越南",
+      "area": "越南・胡志明市",
+      "cuisine": "咖啡廳",
+      "price": "$$",
+      "meal": "全時段",
+      "author": "Kabifufu",
+      "date": "2026-11-21",
+      "location": "3/5 Hoàng Sa, Quận 1, Hồ Chí Minh",
+      "note": "工業風咖啡兼酒吧，白天賣咖啡、晚上變酒吧，店內附設同名服飾店；食記推薦玉米抹茶飲品。",
+      "source": "https://www.threads.com/@8crc788/post/Df9vYWck75b",
+      "color": "indigo",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=Induslism%20Hub%203%2F5%20Ho%C3%A0ng%20Sa%20H%E1%BB%93%20Ch%C3%AD%20Minh",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1573670947179733192"
+      ]
+    },
+    {
+      "id": "bartels-hcmc",
+      "name": "BARTELS",
+      "country": "越南",
+      "area": "胡志明・分店待選",
+      "cuisine": "酸種麵包・早午餐",
+      "price": "$$",
+      "meal": "午餐",
+      "author": "Kabifufu",
+      "date": "2026-11-16",
+      "location": "BARTELS 胡志明市",
+      "note": "源自曼谷的北歐風酸種麵包店，胡志明市在第一郡與草田等地有多家分店，提供麵包、三明治與早午餐；訊息只附品牌帳號，分店未定。",
+      "source": "https://www.instagram.com/bartels.vietnam/",
+      "color": "clay",
+      "verified": true,
+      "map_url": "https://www.google.com/maps/search/?api=1&query=BARTELS%20sourdough%20Ho%20Chi%20Minh%20City",
+      "image_url": "",
+      "image_credit_url": "",
+      "discord_message_ids": [
+        "1571806341708644404"
       ]
     }
   ],
