@@ -3,6 +3,7 @@ name: Deploy Pages
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +12,9 @@ permissions:
   contents: read
 
 concurrency:
-  group: pages
+  # Main pushes stay in one queue so two deploys cannot overlap. Pull
+  # requests use their own group and do not block a production deploy.
+  group: pages-${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -28,12 +31,16 @@ jobs:
       - name: Run tests
         run: npm test
 
-  deploy:
+  # Upload and deploy must be separate jobs. deploy-pages lists artifacts by
+  # name as soon as it starts, and the Actions API can briefly return zero
+  # matches for an artifact that was finalized in the same job a fraction of
+  # a second earlier (actions/deploy-pages#451). A job boundary lets the
+  # artifact become visible before the lookup. Re-running a combined job
+  # also uploads a second github-pages artifact and then fails on the
+  # duplicate name.
+  build:
     needs: validate
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       # Explicit allow-list: only these paths are ever published. Anything
@@ -47,5 +54,16 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
+  deploy:
+    needs: build
+    # A pull request still validates and uploads an artifact, but must not
+    # replace the live site. Main pushes and manual runs deploy as before.
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4
